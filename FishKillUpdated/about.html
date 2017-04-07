@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-baseurl="/">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>
+    Deer Damage Reporting
+  - Missouri Department of Conservation - (2015)
+        </title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width">
+
+        <meta name="format-detection" content="telephone=no">
+
+
+        <meta name="description" content="Deer Damage Reporting Tool." >
+        <meta name="keywords" content="White-tailed deer, whitetail, Odocoileus virginianus, rut, behavior, wildlife damage, rub, marking, human interactions, mammal, conservation, economic damage, Missouri">
+     <!--
+ 	    <meta property="fb:page_id" content="214560802049588" />
+        <meta property="og:title" content="Snazzy Maps - Free Styles for Google Maps" />
+        <meta property="og:site_name" content="Snazzy Maps" />
+        <meta property="og:description" content="Snazzy Maps is a repository of different color schemes for Google Maps aimed towards web designers and developers." />
+        <meta property="og:url" content="index.html" />
+	    <meta property="og:image" content="facebook.html" />
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="index.html">
+        <meta name="twitter:title" content="Snazzy Maps - Free Styles for Google Maps">
+        <meta name="twitter:description" content="Snazzy Maps is a repository of different color schemes for Google Maps aimed towards web designers and developers.">
+        <meta name="twitter:image" content="twitter.html">
+       -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+
+        <link href="feed" rel="alternate" type="application/rss+xml" title="Snazzy Maps - Recent Styles" />
+
+        <link href="Stylesheets/css91af.css?v=zjSXp0W4UK-6IhX4wCPQGFaKSe_6szrbgNmsLRisnn41" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/colorbox.css" />
+        <style>
+        .center {
+		     margin: auto;
+		     //width: 60%;
+		     //border:3px solid #8AC007;
+		     //padding: 10px;
+         }
+        </style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+        <!--<script src="jsd7cd?v=WYIT2FQrc0dYDUzyiHZV6RnNVwmjgOjDdCuTjxjheHg1"></script>-->
+
+        <script type="text/javascript">$.url = function (url) { return "/" + url; }</script>	    <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-MOBEARS-01');ga('send','pageview');
+	    </script>
+
+        <script src="bb3dbx.js"></script>
+       <script src="js/jquery.colorbox-min.js"></script>
+
+    </head>
+    <body class="content ">
+        <div class="navbar navbar-inverse navbar-static-top">
+    <div class="container container-max-width">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <span class="logo"></span>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <div class="navbar-left">
+                <ul class="nav navbar-nav">
+                     <li><a class="bearHubMSU" href="http://mdc7test.mdc.mo.gov/applications/deerdamage">Deer Damage Hub</a></li>
+                     <!--<li><a class="denGallery" href="http://mdc7.mdc.mo.gov/webservices/blackbearproxywebapi/api/blackbearimagesbybear/GetImages/den_1001_001_sm">Den Gallery</a></li>-->
+                     <!--<li><a class="bearTracker" href="index.html">Bear Tracker</a></li>-->
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+    <li class="user">
+          <a id="lastupdate" class="register-link" href="#">Last update: 11.04.2015</a>
+     </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div class="body-container">
+
+<div id='theDenGallery' style='display:none'></div>
+
+<div class="container container-max-width content-padded content-set">
+
+    <div class="row">
+        <div class="col-md-4 col-md-push-8 col-lg-5 col-lg-push-7 em">
+            <div class="faq-about">
+                <p>
+                    <a href="index.html">Deer Damage Reporting</a> is a website that allows you to enter new deer damage information within the State of Missouri.  There is alway a recall feature that allows you to view and/or edit existing deer damage information.  You can recall information by County and/or Year of reporting.
+                </p>
+                <p>
+                  We are using version 3.14 of the <a href="https://developers.arcgis.com/javascript" target="_blank">ESRI ArcGIS API</a> for JavaScript to create the interface that users will be able to enter and view geospatial data.  The data driving the map is being store in MDC&#39;s spatial data engine (SDE) and published as a feature service (editable) through Arc for Server.  Users can also access the data through ESRI&#39;s desktop software (ArcMap) either by connecting to sde or through the rest service.  Accessing this layer allows all users to be viewing & editing the same layer, so everyone has access to the most up to date data.
+                </p>
+<!--
+                  The black bear research is an effort conducted by the Missouri Department of Conservation in collaboration with the following organizations:
+                  <ul>
+                    <li><a href="http://wsfrprograms.fws.gov/Subpages/GrantPrograms/WR/WR_Act.htm" target="_blank"> The Wildlife &#38; Sport Fish Restoration Program </a></li>
+
+         <li><a href="http://www.fwrc.msstate.edu/carnivore/" target="_blank"> The Mississippi State Carnivore Ecology Laboratory </a></li>
+                    <li><a href="http://snr.missouri.edu/fw/" target="_blank"> The University of Missouri Department of Fisheries and Wildlife Sciences</a></li>
+                  </ul>
+-->
+                <p>
+                    <a href="http://mdc.mo.gov/" target="_blank">The Missouri Department of Conservation </a> protects and manages Missouri's fish, forest, and wildlife resources. We also facilitate your participation in resource-management activities, and we provide opportunities for you to use, enjoy and learn about nature.
+                    Click <a href="http://mdc.mo.gov/about-us/how-contact-us" target="_blank"> here </a>to see the various ways to contact us.
+                </p>
+
+                <div class="code-footer text-center">
+                   <p>
+                    <a href="http://mdc.mo.gov/" target="_blank">
+                   <img class="center" src="images/MDClogo.png" alt="Missouri Department of Conservation logo" />
+                   </a>
+                   </p>
+                 </div>
+              <p>&copy; 2015 Conservation Commission of Missouri.<br /> All Rights Reserved.</p>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-md-pull-4 col-lg-7 col-lg-pull-5">
+            <h1 class="title">Frequently Asked Questions</h1>
+
+            <div class="faq">
+                <h3>What am I looking at?</h3>
+                <p>
+                  When you open this website you will see a data entry screen with text boxes, drop-down lists and checkboxes for entering a deer damage report.  The page is broken down into 4 basic sections: Locale (Landowner | Contact | Site), Deer Damage, Area Affected and Recommendations.
+                  When you complete the data entry please press the green "Save the Data" button on the buttom of the page.
+                </p>
+                <p>
+                  There is also a menu bar feature "Recall Reports" that allows you to retrieve existings reports.  These reports can be editing and saved if desired.
+                  You retrieve reports by County and/or Year.  Only 1 report can be retrieved at a time.
+                </p>
+            </div>
+
+            <div class="faq">
+                <h3>What else can I see?</h3>
+                <p>
+                    Within the Deer Damage section of this page is an embedded ArcGis Online Map.
+                </p>
+
+                <p>
+                <p>There are 7 basic deer damage sub-types that can be placed on the map as polygon map features:</p>
+                   <ul>
+                     <li><strong><em>Ag Crop</em></strong>
+                        </li>
+                     <li><strong><em>Garden</em></strong> </li>
+                     <li><strong><em>Landscaping</em></strong> </li>
+                     <li><strong><em>Orchard</em></strong>
+                        </li>
+                     <li><strong><em>Trees</em></strong></li>
+                      <li><strong><em>Vegetable/Truck Crop</em></strong></li>
+                     <li><strong><em>Other</em></strong> </li>
+                     </ul>
+                <p>
+                   These sub-types will display for all entered reports so that you can see the data in context of other deer damage that has already been reported.
+                </p>
+               </div>
+
+            <div class="faq">
+                <h3>How do I control the map?</h3>
+               <p>
+                <p><a href="https://developers.arcgis.com/javascript/jshelp/intro_navigation.html" target="_blank">The ArcGIS API for JavaScript Map Navigation </a> has elements to
+                   allow user interaction with the map. </p>
+                   Users can choose the mouse, keyboard, and sliders for panning and zooming a map, depending on what is enabled in the HTML page. By default, users can do the following:
+                   <ul>
+                     <li>Drag the mouse to pan</li>
+                     <li>Mouse Scroll Forward to zoom in</li>
+                     <li>Mouse Scroll Backward to zoom out</li>
+                     <li>SHIFT + Drag the mouse to zoom in</li>
+                     <li>SHIFT + CTRL + Drag the mouse to zoom out</li>
+                     <li>SHIFT + Click to recenter</li>
+                     <li>Double Click to Center and Zoom in</li>
+                     <li>SHIFT + Double Click to Center and Zoom in</li>
+                     <li>Use arrow keys to pan</li>
+                     <li>Use + key to zoom in a level</li>
+                     <li>Use - key to zoom out a level</li>
+                   </ul>
+            </div>
+
+            <div class="faq">
+                <h3>The website isn't working?</h3>
+               <p>
+                <p>The Deer Damage Reporting website has a few requirements:</p>
+                   <ul>
+                     <li><p>A modern browser. Check here to
+                     <a href="http://browsehappy.com" target="_blank">determine the latest version available for your
+                     browser</a>.</p>
+                     </li>
+                     <li>For full functionality of this site it is necessary to enable JavaScript.
+                          Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+                          instructions how to enable JavaScript in your web browser</a>.
+                      </li>
+                     <li>If you have a newer browser with javascript enabled and you are still experiencing
+                        trouble with this website please phone: 573-815-7900</li>
+                     </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7 col-md-offset-4">
+        </div>
+    </div>
+</div>
+
+        </div>
+
+<footer>
+    <div class="container container-max-width">
+        <div class="row">
+            <div class="col-md-4 footer-main">
+                <div class="container-brand">
+                    <a class="brand" href="index.html">
+                        <span class="logo"></span>
+                    </a>
+                </div>
+                <div class="container-desc">
+                </div>
+             <!--
+                <div id="social-icons">
+                    <a href="https://twitter.com/snazzymaps" target="_blank" title="Follow us on Twitter">
+                        <i class="icon-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/SnazzyMaps" target="_blank" title="Like us on Facebook">
+                        <i class="icon-facebook"></i>
+                    </a>
+                    <a href="https://google.com/+SnazzyMaps" target="_blank" title="Follow us on Google+">
+                        <i class="icon-googleplus"></i>
+                    </a>
+                    <a href="mailto:support@snazzymaps.com" title="Email us at support@snazzymaps.com">
+                        <i class="icon-mail"></i>
+                    </a>
+                </div>
+             -->
+            </div>
+            <div class="col-md-8 container-footer-links">
+                <div class="footer-links primary header-font clearfix">
+                </div>
+                <div class="tags footer-links clearfix">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <script id="notification-template" type="text/x-handlebars-template">
+    <div class="container-alert">
+         <div class="alert alert-{{level}}">
+            <button type="button" class="close">&times;</button>
+            <div class="message">{{{message}}}</div>
+        </div>
+    </div>
+</script>
+
+<script>
+	$(document).ready(function(){
+	     getUpdate();
+	     getDenPhotoGallery();
+
+	     $('.denGallery').click(function() {
+		     $('.denGallery').colorbox({rel:'denGallery',photo:'true',retinaImage:true});
+		 });
+
+		 $.extend($.colorbox.settings, {opacity:0, overlayClose:false, left:10, trapFocus:false, maxWidth:'95%', maxHeight:'95%'});
+
+     });
+</script>
+
+    </body>
+</html>

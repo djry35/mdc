@@ -1,0 +1,107 @@
+.txtFieldHeader
+{
+	width: 11%;
+    float: left;
+    text-align: right;
+    margin-bottom: 2px;
+    padding-top: 6px;
+}
+.txtFieldInput
+{
+	width: 20%;
+    margin-left: 10px;
+    float:left;
+    margin-bottom: 2px;
+    height: 30px;
+}
+h4
+{
+	width: 30%;
+	text-align: center;
+	margin-top: 0;
+	text-decoration: underline;
+}
+
+#unitsTime-button.ui-selectmenu-button.ui-button, #dmgUnits-button.ui-selectmenu-button.ui-button,
+	#unitsTempAfter-button.ui-selectmenu-button.ui-button, #unitsTempDuring-button.ui-selectmenu-button.ui-button
+{
+	width: 100px;
+}
+
+#pollutants
+{
+	width: 30%;
+	text-align: center;
+}
+#pollutants div  
+{
+	padding: 10px 0px 10px 0px;
+}
+#pollutants div div, #pollutants div div div
+{
+	padding: 0px;
+}
+
+#InjuriesFldset div
+{
+	margin-top: 30px;
+}
+#InjuriesFldset div div, #InjuriesFldset div div div
+{
+	margin: 0px;
+}
+
+.InjuriesFldsetHeader, .InjuriesFldsetHeader
+{
+	width: 30%;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.notifiedPersonHeader, .investigatedPersonHeader
+{
+	width: 35%;
+	text-align: center;
+	text-decoration: underline;
+}
+
+#environmentFldset div
+{
+    margin-bottom: 2px;
+    padding-top: 3px;	
+}
+
+.notifiedPerson
+{
+    padding-top: 3px;	
+    margin-bottom: 30px;
+}
+
+.investigatedPerson
+{
+    padding-top: 3px;	
+    margin-bottom: 20px;
+}
+.notifiedRemoveButton, .investigatedRemoveButton
+{
+	margin-left: 12%;
+}
+
+.dateInput
+{
+	width: 90px;
+}
+
+span.errorMsg
+{
+	display: inline-block;
+	border: solid red;
+	background-color: rgba(255, 0, 0, .3);
+	text-align: center;
+	padding: 3px 8px;
+}
+
+.inputWrapper
+{
+	height:40px;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html5>
+<html lang = "en">
+<head>
+    <title>
+        On-Site Report of Pollution Investigations and Fish Kills
+    </title>
+
+    <!-- Meta tags go here -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="classmat-detection" content="telephone=no">
+
+    <!-- Any styling should go here. -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="index.html" />
+    <link href="Stylesheets/css91af.css?v=zjSXp0W4UK-6IhX4wCPQGFaKSe_6szrbgNmsLRisnn41" rel="stylesheet"/>
+    <link href="Stylesheets/Plugins/highlightjs/default.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap-toggle.min.css" />
+    <link rel="stylesheet" type="text/css" href="src/bootstrap-duallistbox.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fromIndex.css">
+    <link rel="stylesheet" type="text/css" href="css/DanielCSS.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dropdown.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.timepicker.css">
+</head>
+
+<body class="nav-small nav-full-width detail">
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container container-max-width">
+         <div class="navbar-header">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+             <a class="navbar-brand" href="indexRevamp.html">
+             <span class="logo"></span>
+             </a>
+         </div>
+         <div class="navbar-collapse collapse">
+           <div class="navbar-left">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">About</a></li>
+                </ul>
+           </div>
+           <div class="navbar-right">
+              <ul class="nav navbar-nav">
+                 <li class="user">
+                    <a id="lastupdate">Last update: 03.30.2017</a>
+                 </li>
+              </ul>
+           </div>
+         </div>
+      </div>
+    </div>
+
+<select name="submitted" id="submitted">
+</select>
+
+<form id="formWrapper">
+<div id="formWrapper2" style="columns: 2">
+    <div id="form">
+        <div id="descriptionExpand" style="height: 825px">
+       		<h3 id="descriptionTab">Descriptive Data</h3>
+			<div style="height: 225px">
+				<label class="txtFieldHeader">First Name:</label>
+				<label class="txtFieldHeader">Last Name:</label>
+				<label class="txtFieldHeader">Title:</label>
+				<label class="txtFieldHeader">Address:</label>
+				<label class="txtFieldHeader">City:</label>
+				<label class="txtFieldHeader">Zip:</label>
+				<label class="txtFieldHeader">Phone:</label>
+			</div>
+			<div style="height: 300px">
+				<h4 class="txtFieldHeader">Investigation Details</h4>
+				<label class="txtFieldHeader">Date:</label>
+				<label class="txtFieldHeader">Time:</label>
+				<label class="txtFieldHeader">Nearest Town:</label>
+				<label class="txtFieldHeader">County:</label>
+				<label class="txtFieldHeader">Location Detail:</label>
+			</div>
+			<div  style="height: 200px">
+				<h4 class="txtFieldHeader">Legal Descriptors</h4><br><br><br>
+				T<input type="number" name="legalTN" id="legalTN" style="width: 51px">N<br>
+				R<input type="number" name="legalRW" id="legalRW" style="width: 50px">W<br>
+				S<input type="number" name="legalS" id="legalS" style="width: 50px"><br>
+			</div>
+			<div>
+				<label class="txtFieldHeader">Waterbody:</label>
+				<label class="txtFieldHeader">Body Name:</label>
+        	</div>
+        </div>
+        <div style="height: 225px">
+	        <h3 id="involvedTab">People Involved</h3>
+	        <label class="txtFieldHeader">Agency</label>
+	        <label class="txtFieldHeader">Name</label>
+	        <label class="txtFieldHeader">Phone</label>
+	        <label class="txtFieldHeader">Email</label>
+	        <label class="txtFieldHeader">Date</label>
+	        <label class="txtFieldHeader">Time</label>
+	    </div>
+        <div id="pollutionExpand" style="height: 325px">
+        	<h3 id="pollutionTab">Pollution Source</h3>
+            <div>
+            	<label class="txtFieldHeader">Sources:</label>
+                <label class="txtFieldHeader">Cause/Agent:</label> 
+                <label class="txtFieldHeader">Source:</label> 
+                <label class="txtFieldHeader">Quantity:</label> 
+                <label class="txtFieldHeader">Spill Date:</label>
+                <label class="txtFieldHeader">Missouri waters contaminated?</label>
+                <label class="txtFieldHeader">Evidence of groundwater contamination?</label>
+            </div>
+        </div>
+        <div id="injuriesExpand" style="height: 700px">
+    		<h3 id="injuriesTab">Injuries to Fish and Wildlife</h3>
+            <label class="txtFieldHeader">Other dead animals:</label> 
+            <label class="txtFieldHeader">Fish killed by natural causes:</label> 
+            <label class="txtFieldHeader">Natural kill count:</label> 
+            <label class="txtFieldHeader">Species:</label>
+            <label class="txtFieldHeader">State of Decay:</label>
+            <label class="txtFieldHeader">Live fish present:</label> 
+            <label class="txtFieldHeader">Injuries observed:</label>
+            <label class="txtFieldHeader">Injuries:</label><br>
+            <label class="txtFieldHeader">Live Fish Behavior:</label><br>
+            <label class="txtFieldHeader">Extent of damage:</label> 
+            <label class="txtFieldHeader">Duration of Effects:</label> 
+        </div>
+        <div id="environmentExpand" style="height: 925px">
+        	<h3 id="environmentTab">Environmental Conditions</h3>
+            <div style="height: 465px">
+                <h4>During the Investigation...</h4>
+                <label class="txtFieldHeader">Precipitation?</label>
+                <label class="txtFieldHeader">Air Temp:</label>
+                <label class="txtFieldHeader">Cloud Cover:</label>
+                <label class="txtFieldHeader">Water Flow:</label>
+                <label class="txtFieldHeader">Turbidity:</label>
+                <label class="txtFieldHeader">Color:</label>
+                <label class="txtFieldHeader">Visible Discharge?</label>
+                <label class="txtFieldHeader">Surface Scum?</label>
+                <label class="txtFieldHeader">Odor:</label> 
+            </div>
+            <div>
+                <h4>24 Hours Earlier...</h4>
+                <label class="txtFieldHeader">Precipitation?</label>
+                <label class="txtFieldHeader">Air Temp:</label>
+                <label class="txtFieldHeader">Cloud Cover:</label>
+                <label class="txtFieldHeader">Turbidity:</label>
+                <label class="txtFieldHeader">Color:</label> 
+                <label class="txtFieldHeader">Visible Discharge?</label>
+                <label class="txtFieldHeader">Surface Scum?</label>
+                <label class="txtFieldHeader">Odor:</label> 
+            </div>
+        </div>
+        <div>
+	        <h3 id="investigationTab">Investigative Time</h3>
+	        <div id="investigationExpand">
+	        </div>
+	    </div>
+	    <div>
+	        <h3 id="waterSamplesTab">Water Sample Stations</h3>
+	        <div id="waterSamplesExpand">
+	        </div>	
+        </div>
+        <div  style="height: 200px">
+	        <h3 id="commentsTab">Comments</h3>
+	        <div id="txtFieldHeader">
+	              <label class="txtFieldHeader">Investigation:</label><br>
+	              <label class="txtFieldHeader">Corrective action:</label><br>
+	        </div>
+    	</div>
+    </div>
+
+    <input type="submit" id="submitBtn" value="Submit form">
+
+</div>
+</form>
+
+
+
+<!-- All JS goes down here to ensure all elements get their events -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="js/regexPlugin.js"></script>
+<!-- <script type="text/javascript" src="js/parsley.min.js"></script>
+<script type="text/javascript" src="js/parsleyTest.js"></script> -->
+<script type="text/javascript" src="js/admin/fetchSubmitted.js"></script>
+
+</body>
+</html>
