@@ -111,12 +111,12 @@ $("#addPeopleNotified").click(
 		else
 			num++;
 
-		var agency = "<div class='inputWrapper'><label for='agencyNotified' class='txtFieldHeader'>Agency</label><input class='txtFieldInput agencyDropdown' id='agencyNotified" + num + "' required></div>",
-			notifiedPerson = "<div class='inputWrapper'><label for='personNotified' class='txtFieldHeader'>Name</label><input class='txtFieldInput' id='personNotified" + num + "' required></div>",
-			phone = "<div class='inputWrapper'><label for='phoneNotified' class='txtFieldHeader'>Phone</label><input type='tel' class='txtFieldInput' id='phoneNotified" + num + "' pattern='^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$' required></div>",
-			email = "<div class='inputWrapper'><label for='emailNotified' class='txtFieldHeader'>Email</label><input class='txtFieldInput' id='emailNotified" + num + "' required pattern='/^[A-Z0-9._-]+@[A-Z0-9.-]+\\.[A-Z0-9.-]+$/i'></div>",
-			date = "<div class='inputWrapper'><label for='dateNotified' class='txtFieldHeader'>Date</label><input class='txtFieldInput dateInput' id='dateNotified" + num + "' required></div>",
-			time = "<div class='inputWrapper'><label class='txtFieldHeader'>Time</label><input class='timeInput txtFieldInput' style='width: 90px' required></div>",
+		var agency = "<div class='inputWrapper'><label for='agencyNotified' class='txtFieldHeader'>Agency</label><input class='txtFieldInput agencyDropdown' id='agencyNotified" + num + "'></div>",
+			notifiedPerson = "<div class='inputWrapper'><label for='personNotified' class='txtFieldHeader'>Name</label><input class='txtFieldInput' id='personNotified" + num + "'></div>",
+			phone = "<div class='inputWrapper'><label for='phoneNotified' class='txtFieldHeader'>Phone</label><input type='tel' class='txtFieldInput' id='phoneNotified" + num + "' pattern='^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$'></div>",
+			email = "<div class='inputWrapper'><label for='emailNotified' class='txtFieldHeader'>Email</label><input class='txtFieldInput' id='emailNotified" + num + "' pattern='/^[A-Z0-9._-]+@[A-Z0-9.-]+\\.[A-Z0-9.-]+$/i'></div>",
+			date = "<div class='inputWrapper'><label for='dateNotified' class='txtFieldHeader'>Date</label><input class='txtFieldInput dateInput' id='dateNotified" + num + "'></div>",
+			time = "<div class='inputWrapper'><label class='txtFieldHeader'>Time</label><input class='timeInput txtFieldInput' style='width: 90px'></div>",
 			button = "<input type='button' class='notifiedRemoveButton' value='Remove this person' id='removeNotified" + num + "'>";
 
 		$("#notifiedPeopleContainer").append(
@@ -154,11 +154,11 @@ $("#addPeopleInvestigated").click(
 			num++;
 		}
 
-		var investigatedPerson = "<div class='inputWrapper'><label for='personInvestigated' class='txtFieldHeader'>Name</label><input class='txtFieldInput' id='personInvestigated" + num + "' required></div>",
-			division = "<div class='inputWrapper'><label for='divisionInvestigated' class='txtFieldHeader'>Division</label><input class='txtFieldInput' id='divisionInvestigated" + num + "' required></div>",
-			phone = "<div class='inputWrapper'><label for='phoneInvestigated' class='txtFieldHeader'>Phone</label><input type='tel' class='txtFieldInput' id='phoneInvestigated" + num + "' pattern='^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$' required></div>",
-			hours = "<div class='inputWrapper'><label for='hoursInvestigated' class='txtFieldHeader'>Hours</label><input class='txtFieldInput' id='hoursInvestigated" + num + "' type='number' required></div>",
-			date = "<div class='inputWrapper'><label for='dateInvestigated' class='txtFieldHeader'>Date</label><input class='txtFieldInput dateInput' id='dateInvestigated" + num + "' required></div>",
+		var investigatedPerson = "<div class='inputWrapper'><label for='personInvestigated' class='txtFieldHeader'>Name</label><input class='txtFieldInput' id='personInvestigated" + num + "'></div>",
+			division = "<div class='inputWrapper'><label for='divisionInvestigated' class='txtFieldHeader'>Division</label><input class='txtFieldInput' id='divisionInvestigated" + num + "'></div>",
+			phone = "<div class='inputWrapper'><label for='phoneInvestigated' class='txtFieldHeader'>Phone</label><input type='tel' class='txtFieldInput' id='phoneInvestigated" + num + "' pattern='^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$'></div>",
+			hours = "<div class='inputWrapper'><label for='hoursInvestigated' class='txtFieldHeader'>Hours</label><input class='txtFieldInput' id='hoursInvestigated" + num + "' type='number'></div>",
+			date = "<div class='inputWrapper'><label for='dateInvestigated' class='txtFieldHeader'>Date</label><input class='txtFieldInput dateInput' id='dateInvestigated" + num + "'></div>",
 			button = "<input type='button' class='investigatedRemoveButton' value='Remove this person' id='removeInvestigated" + num + "'>";
 
 		$("#investigativePeopleContainer").append(
@@ -167,14 +167,66 @@ $("#addPeopleInvestigated").click(
 			+ button + "</div>" + investigatedPerson + division + phone + hours + date 
 			+  "</div>");
 
-		$("#dateInvestigated" + num).datepicker({ changeMonth: true, changeYear: true, 
-			onSelect: function() { $(this).parsley().validate(); } });
+		$("#dateInvestigated" + num).datepicker({ changeMonth: true, changeYear: true });
 
 		$("#removeInvestigated" + num).button();
 		$(".investigatedRemoveButton").click(
 			function(event) {
 				var num = $(this).attr("id").slice(-1);
 				$("#investigated" + num).remove();
+			}
+		);
+	}
+);
+
+
+$("#addWaterSampleStations").button();
+
+$("#addWaterSampleStations").click( 
+	function(event) {
+		var num = $("#waterSampleStationsContainer").children().last().attr("id");
+		if(num == null)
+			num = 1;
+		else
+		{
+			num = num.slice(-1);
+			num++;
+		}
+
+		var stationDescription = "<div class='inputWrapper'><label for='waterSampleStationDescription" + num + "' class='txtFieldHeader'>Station Description</label><input class='txtFieldInput' id='waterSampleStationDescription" + num + "'></div>",
+
+			county = "<div class='inputWrapper'><label for='county" + num + "' class='txtFieldHeader'>Date</label><input class='txtFieldInput' id='county" + num + "'></div>",
+
+			coordinates = "<div class='inputWrapper'><label for='dateRecorded' class='txtFieldHeader'>Coordinates</label><input class='txtFieldInput dateInput' id='dateRecorded" + num + "'></div>",
+			DO = "<div class='inputWrapper'><label for='DO" + num + "' class='txtFieldHeader'>DO (mg/L)</label><input class='txtFieldInput' id='DO" + num + "'></div>",
+
+			temp = "<div class='inputWrapper'><label for='temp" + num + "' class='txtFieldHeader'>Temperature</label><input class='txtFieldInput' id='temp" + num + "'></div>",
+
+			pH = "<div class='inputWrapper'><label for='pH" + num + "' class='txtFieldHeader'>pH</label><input class='txtFieldInput' id='pH" + num + "'></div>",
+
+			NH3 = "<div class='inputWrapper'><label for='NH3" + num + "' class='txtFieldHeader'>NH3 (mg/L)</label><input class='txtFieldInput' id='NH3" + num + "'></div>",
+
+			comments = "<div class='inputWrapper'><label for='stationComments" + num + "' class='txtFieldHeader'>Comments</label><input class='txtFieldInput dateInput' id='stationComments" + num + "'></div>",
+
+			date = "<div class='inputWrapper'><label for='dateRecorded' class='txtFieldHeader'>Date</label><input class='txtFieldInput dateInput' id='dateRecorded" + num + "'></div>",
+
+			time = "<div class='inputWrapper'><label class='txtFieldHeader'>Time</label><input class='timeInput txtFieldInput' style='width: 90px'></div>",
+
+			button = "<input type='button' class='stationRemoveButton' value='Remove this station' id='removeStation" + num + "'>";
+
+		$("#waterSampleStationsContainer").append(
+			"<div class='sampleStation' id='station" + num 
+			+ "'><label class='sampleStationHeader'>Station Information</label><div>" 
+			+ button + "</div>" + stationDescription + county + coordinates 
+			+ DO + temp + pH + NH3 + comments + date + time + "</div>");
+
+		$("#dateRecorded" + num).datepicker({ changeMonth: true, changeYear: true });
+
+		$("#removeStation" + num).button();
+		$(".stationRemoveButton").click(
+			function(event) {
+				var num = $(this).attr("id").slice(-1);
+				$("#station" + num).remove();
 			}
 		);
 	}

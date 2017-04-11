@@ -87,31 +87,31 @@ they will update when the form tries to be submitted.
                 <h4>Your Information</h4>
                 <div class="inputWrapper">
                     <label for="rFirstName" class="txtFieldHeader">First Name:</label>
-                    <input type="text" name="rFirstName" class="txtFieldInput form-control" id="rFirstName" required data-parsley-length="[3, 15]">
+                    <input type="text" name="rFirstName" class="txtFieldInput form-control" id="rFirstName" data-parsley-length="[3, 15]">
                 </div>
                 <div class="inputWrapper">
                     <label for="rLastName" class="txtFieldHeader">Last Name:</label>
-                    <input type="text" name="rLastName" class="txtFieldInput form-control" id="rLastName" required data-parsley-length="[3, 15]">
+                    <input type="text" name="rLastName" class="txtFieldInput form-control" id="rLastName" data-parsley-length="[3, 15]">
                 </div>
                 <div class="inputWrapper">
                     <label for="rTitle" class="txtFieldHeader">Title:</label>
-                    <input type="text" name="rTitle" class="txtFieldInput form-control" id="rTitle" required>
+                    <input type="text" name="rTitle" class="txtFieldInput form-control" id="rTitle">
                 </div>
                 <div class="inputWrapper">
                     <label for="rAddress" class="txtFieldHeader">Address:</label>
-                    <input type="text" name="rAddress" class="txtFieldInput form-control" id="rAddress" required>
+                    <input type="text" name="rAddress" class="txtFieldInput form-control" id="rAddress">
                 </div>
                 <div class="inputWrapper">
                     <label for="rCity" class="txtFieldHeader">City:</label>
-                    <input type="text" name="rCity" class="txtFieldInput form-control" id="rCity" required>
+                    <input type="text" name="rCity" class="txtFieldInput form-control" id="rCity">
                 </div>
                 <div class="inputWrapper">
                     <label for="rZipCode" class="txtFieldHeader">Zip:</label>
-                    <input type="number" name="rZipCode" class="txtFieldInput form-control" id="rZipCode" style="width: 70px" required pattern="^\d{5}$">
+                    <input type="number" name="rZipCode" class="txtFieldInput form-control" id="rZipCode" style="width: 70px" pattern="^\d{5}$">
                 </div>
                 <div class="inputWrapper">
                     <label for="rPhone" class="txtFieldHeader">Phone:</label>
-                    <input type="tel" name="rPhone" placeholder="123 456-7890" class="txtFieldInput form-control" id="rPhone" style="width: 150px" required pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$">
+                    <input type="tel" name="rPhone" placeholder="123 456-7890" class="txtFieldInput form-control" id="rPhone" style="width: 150px" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$">
                 </div>
             </div>
             <br>
@@ -121,27 +121,27 @@ they will update when the form tries to be submitted.
                     <div style="height: 200px">
                         <div class="inputWrapper">
                             <label for="investigationDate" class="txtFieldHeader">Date:</label>
-                            <input type="text" name="investigationDate" class="txtFieldInput dateInput form-control" id="investigationDate" required readonly style="background-color: #fff !important; cursor: text !important">
+                            <input type="text" name="investigationDate" class="txtFieldInput dateInput form-control" id="investigationDate" readonly style="background-color: #fff !important; cursor: text !important">
                         </div>
                         <div class="inputWrapper">
                             <label class="txtFieldHeader">Time:</label>
-                            <input name="investigationTime" id="investigationTime" class="txtFieldInput timeInput" style="width: 90px" required>
+                            <input name="investigationTime" id="investigationTime" class="txtFieldInput timeInput" style="width: 90px">
                         </div>
                     </div>
                     <div style="height: 375px">
                         <div style="height: 130px">
                             <div class="inputWrapper">
                                 <label for="nearestTown" class="txtFieldHeader">Nearest Town:</label>
-                                <input type="text" name="nearestTown" id="nearestTown" class="txtFieldInput form-control" required>
+                                <input type="text" name="nearestTown" id="nearestTown" class="txtFieldInput form-control">
                             </div>
                             <div class="inputWrapper">
                                 <label for="counties" class="txtFieldHeader">County:</label>
-                                <input name="counties" id="counties" class="txtFieldInput form-control" required>
+                                <input name="counties" id="counties" class="txtFieldInput form-control">
                             </div>
                             <div class="inputWrapper">
                                 <label class="txtFieldHeader" for="coordCategory">Location Detail:</label>
                                 <div class="txtFieldInput">
-                                    <select name="coordCategory" id="coordCategory" class="form-control" required>
+                                    <select name="coordCategory" id="coordCategory" class="form-control">
                                         <option></option>
                                         <option value="line">Plot Line</option>
                                         <option value="point">Single Point</option>
@@ -192,7 +192,7 @@ they will update when the form tries to be submitted.
                 <div class="inputWrapper">
                     <label class="txtFieldHeader" for="waterType">Body of Water</label>
                     <div class="txtFieldInput">
-                        <select name="waterType" id="waterType" class="form-control" required>
+                        <select name="waterType" id="waterType" class="form-control">
                             <option></option>
                             <option value="lake">Lake</option>
                             <option value="pond">Pond</option>
@@ -205,7 +205,7 @@ they will update when the form tries to be submitted.
                 </div>
                 <div class="inputWrapper">
                     <label for="waterbodyName" class="txtFieldHeader">Body Name:</label>
-                    <input name="waterbodyName" type="text" id="waterbodyName" class="txtFieldInput" required>
+                    <input name="waterbodyName" type="text" id="waterbodyName" class="txtFieldInput">
                 </div>
             </div>
         </div>
@@ -222,27 +222,27 @@ they will update when the form tries to be submitted.
                     <div class="inputWrapper">
                         <label for="agencyNotified" class="txtFieldHeader">Agency</label>
                         <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" 
-                            value="DNR-EER" required disabled>
+                            value="DNR-EER" disabled>
                     </div>
                     <div class="inputWrapper">
                         <label for="personNotified" class="txtFieldHeader">Name</label>
-                        <input name="personNotified1" class="txtFieldInput" id="personNotified1" required>
+                        <input name="personNotified1" class="txtFieldInput" id="personNotified1">
                     </div>
                     <div class="inputWrapper">
                         <label for="phoneNotified" class="txtFieldHeader">Phone</label>
-                        <input name="phoneNotified1" type="tel" class="txtFieldInput" id="phoneNotified1" required>
+                        <input name="phoneNotified1" type="tel" class="txtFieldInput" id="phoneNotified1">
                     </div>
                     <div class="inputWrapper">
                         <label for="emailNotified" class="txtFieldHeader">Email</label>
-                        <input name="emailNotified1" class="txtFieldInput" id="emailNotified1" required>
+                        <input name="emailNotified1" class="txtFieldInput" id="emailNotified1">
                     </div>
                     <div class="inputWrapper">
                         <label for="dateNotified" class="txtFieldHeader">Date</label>
-                        <input name="dateNotified1" class="txtFieldInput dateInput" id="dateNotified1" required readonly style="background-color: #fff !important; cursor: text !important">
+                        <input name="dateNotified1" class="txtFieldInput dateInput" id="dateNotified1" readonly style="background-color: #fff !important; cursor: text !important">
                     </div>
                     <div class="inputWrapper">
                         <label class="txtFieldHeader">Time</label>
-                        <input name="timeNotified1" id="timeNotified1" class="timeInput txtFieldInput" style="width: 90px" required>
+                        <input name="timeNotified1" id="timeNotified1" class="timeInput txtFieldInput" style="width: 90px">
                     </div>
                 </div>
             </div>
@@ -255,7 +255,7 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="agOps">Agriculture Operations</label>
-                    <input type="checkbox" name="pollutionCat[]" id="agOps" class="pollutionCat" data-parsley-group="pollutionCheckboxes" data-parsley-mincheck="1" required>
+                    <input type="checkbox" name="pollutionCat[]" id="agOps" class="pollutionCat" data-parsley-group="pollutionCheckboxes" data-parsley-mincheck="1">
                     <div id="agOpsOptions" hidden>
                         <label for="fertilizer">Fertilizer</label> 
                         <input name="agPollution[]" type="checkbox" class="agPollution" id="fertilizer" data-parsley-group="agPollution">
@@ -335,25 +335,25 @@ they will update when the form tries to be submitted.
             <div style="height: 190px; margin-top: 40px">
                 <div class="inputWrapper">
                     <label for="causePol" class="txtFieldHeader">Cause/Agent:</label> 
-                    <input name="causePol" type="text" class="txtFieldInput" id="causePol" required>
+                    <input name="causePol" type="text" class="txtFieldInput" id="causePol">
                 </div>
                 <div class="inputWrapper">
                     <label for="sourcePol" class="txtFieldHeader">Source:</label> 
-                    <input name="sourcePol" type="text" class="txtFieldInput" id="sourcePol" required>
+                    <input name="sourcePol" type="text" class="txtFieldInput" id="sourcePol">
                 </div>
                 <div class="inputWrapper">
                     <label for="quantityPol" class="txtFieldHeader">Quantity:</label> 
-                    <input name="quantityPol" type="number" class="txtFieldInput" id="quantityPol" required>
+                    <input name="quantityPol" type="number" class="txtFieldInput" id="quantityPol">
                 </div>
                 <div class="inputWrapper">
                     <label for="eventDatePol" class="txtFieldHeader">Spill Date:</label>
-                    <input name="eventDatePol" type="text" class="txtFieldInput dateInput" id="eventDatePol" style="width:90px" required readonly style="background-color: #fff !important; cursor: text !important">
+                    <input name="eventDatePol" type="text" class="txtFieldInput dateInput" id="eventDatePol" style="width:90px" readonly style="background-color: #fff !important; cursor: text !important">
                 </div>
             </div>
             <div>
                 <label for="moWatersContamination">Are Missouri waters contaminated?</label>
                 <label for="YWC">Yes</label>
-                <input type="radio" id="YWC" name="moWatersContamination" class="MWC" required>
+                <input type="radio" id="YWC" name="moWatersContamination" class="MWC">
                 <label for="NWC">No</label>
                 <input type="radio" id="NWC" name="moWatersContamination" class="MWC">
                 <label for="UWC">Unknown</label>
@@ -362,7 +362,7 @@ they will update when the form tries to be submitted.
             <div>
                 <label for="groundwaterContamination">Is there evidence of groundwater contamination?</label>
                 <label for="YGW">Yes</label>
-                <input type="radio" id="YGW" name="groundwaterContamination" class="GWC" required>
+                <input type="radio" id="YGW" name="groundwaterContamination" class="GWC">
                 <label for="NGW">No</label>
                 <input type="radio" id="NGW" name="groundwaterContamination" class="GWC">
                 <label for="UGW">Unknown</label>
@@ -389,7 +389,7 @@ they will update when the form tries to be submitted.
             <div id="species">
                 <label class="InjuriesFldsetHeader">Specify all species found dead</label><br>
                 <label for="bass">Bass</label> 
-                <input data-parsley-group="fishSpecies" data-parsley-mincheck="1" required name="speciesFish[]" class='SpeciesNaturalKill' type="checkBox" id="bass">
+                <input data-parsley-group="fishSpecies" data-parsley-mincheck="1" name="speciesFish[]" class='SpeciesNaturalKill' type="checkBox" id="bass">
                 <label for="bullheads">Bullheads</label> 
                 <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="bullheads">
                 <label for="carp">Carp</label> 
@@ -424,7 +424,7 @@ they will update when the form tries to be submitted.
 
             <div>
                 <label for="stateOfDecay">State of Decay</label>
-                <select name="stateOfDecay" id="stateOfDecay" class="form-control" required>
+                <select name="stateOfDecay" id="stateOfDecay" class="form-control">
                     <option></option>
                     <option value="Fresh">Fresh Dead</option>
                     <option value="Slight">Slight Decay</option>
@@ -480,7 +480,7 @@ they will update when the form tries to be submitted.
             <div id="behaviors">
                 <label class="InjuriesFldsetHeader">Live Fish Behavior</label><br>
                 <label for="Normal">Normal</label> 
-                <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" data-parsley-mincheck="1" required class="behavior" id="Normal">
+                <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" data-parsley-mincheck="1" class="behavior" id="Normal">
                 <label for="Convulsive">Convulsive</label> 
                 <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" class="behavior" id="Convulsive">
                 <label for="Lethargic">Lethargic</label> 
@@ -501,8 +501,8 @@ they will update when the form tries to be submitted.
             <div>
                 <div class="inputWrapper" id="extentDmgWrapper">
                     <label for="dmgEval">Extent of damage:</label> 
-                    <input name="dmgEval" type="text" id="dmgEval" required> 
-                    <select name="dmgUnits" id="dmgUnits" required>
+                    <input name="dmgEval" type="text" id="dmgEval"> 
+                    <select name="dmgUnits" id="dmgUnits">
                         <option></option>
                         <option value="miles">miles</option>
                         <option value="acres">acres</option>
@@ -513,7 +513,7 @@ they will update when the form tries to be submitted.
                 <br><br>
                 <div class="inputWrapper" id="durationEffectsWrapper">
                 <label for="Duration">Duration of Effects:</label> 
-                <input name="DurationEffects" type="number" id="DurationEffects" style="width: 51px" required> days
+                <input name="DurationEffects" type="number" id="DurationEffects" style="width: 51px"> days
                 </div>
                 <div id="durationEffectsError" hidden><span class="errorMsg"></span></div>
             </div>
@@ -525,14 +525,14 @@ they will update when the form tries to be submitted.
                 <div>
                     <label for="precipitationDuring">Precipitation?</label>
                     <label for="YPD">Yes</label>
-                    <input type="radio" id="YPD" name="precipitationDuring" class="PD" required>
+                    <input type="radio" id="YPD" name="precipitationDuring" class="PD">
                     <label for="NPD">No</label>
                     <input type="radio" id="NPD" name="precipitationDuring" class="PD">
                 </div>
                 <div id="tempDuringWrapper">
                     <label for="airTempDuring">Air Temperature</label>
-                    <input name="airTempDuring" type="number" id="airTempDuring" style="width: 50px" required>
-                    <select name="unitsTempDuring" id="unitsTempDuring" required>
+                    <input name="airTempDuring" type="number" id="airTempDuring" style="width: 50px">
+                    <select name="unitsTempDuring" id="unitsTempDuring">
                         <option></option>
                         <option>&deg;C</option>
                         <option>&deg;F</option>
@@ -541,7 +541,7 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="cloudCoverDuring">Cloud Cover</label>
-                    <select name="cloudCoverDuring" id="cloudCoverDuring" required>
+                    <select name="cloudCoverDuring" id="cloudCoverDuring">
                         <option></option>
                         <option value="clear">Clear</option>
                         <option value="partlyCloudy">Partly Cloudy</option>
@@ -552,7 +552,7 @@ they will update when the form tries to be submitted.
                 <label class="InjuriesFldsetHeader">Water Description</label>
                 <div>
                     <label for="waterFlowDuring">Water Flow</label>
-                    <select name="waterFlowDuring" id="waterFlowDuring" required>
+                    <select name="waterFlowDuring" id="waterFlowDuring">
                         <option></option>
                         <option value="0">None</option>
                         <option value="low">Low</option>
@@ -562,7 +562,7 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="waterTurbidityDuring">Turbidity</label>
-                    <select name="waterTurbidityDuring" id="waterTurbidityDuring" required>
+                    <select name="waterTurbidityDuring" id="waterTurbidityDuring">
                         <option></option>
                         <option value="clear">Clear</option>
                         <option value="hazy">Hazy</option>
@@ -571,25 +571,25 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="waterDescColorDuring">Describe the color:</label>
-                    <input name="waterDescColorDuring" type="text" id="waterDescColorDuring" required>
+                    <input name="waterDescColorDuring" type="text" id="waterDescColorDuring">
                 </div>
                 <div>
                     <label for="dischargeDuring">Visible Discharge?</label>
                     <label for="YDD">Yes</label>
-                    <input type="radio" id="YDD" name="dischargeDuring" class="DD" required>
+                    <input type="radio" id="YDD" name="dischargeDuring" class="DD">
                     <label for="NDD">No</label>
                     <input type="radio" id="NDD" name="dischargeDuring" class="DD">
                 </div>
                 <div>
                     <label for="scumDuring">Surface Scum Present?</label>
                     <label for="YSD">Yes</label>
-                    <input type="radio" id="YSD" name="scumDuring" class="SD" required>
+                    <input type="radio" id="YSD" name="scumDuring" class="SD">
                     <label for="NSD">No</label>
                     <input type="radio" id="NSD" name="scumDuring" class="SD">
                 </div>
                 <div>
                     <label for="waterDescOdorDuring">Describe any odor present:</label> 
-                    <input name="waterDescOdorDuring" type="text" id="waterDescOdorDuring" required>
+                    <input name="waterDescOdorDuring" type="text" id="waterDescOdorDuring">
                 </div>
             </div>
             <br><br><br>
@@ -598,7 +598,7 @@ they will update when the form tries to be submitted.
                 <div>
                     <label for="precipitationAfter">Precipitation?</label>
                     <label for="YPA">Yes</label>
-                    <input type="radio" id="YPA" name="precipitationAfter" class="PA" required>
+                    <input type="radio" id="YPA" name="precipitationAfter" class="PA">
                     <label for="NPA">No</label>
                     <input type="radio" id="NPA" name="precipitationAfter" class="PA">
                     <div id="precAmt" hidden>
@@ -609,8 +609,8 @@ they will update when the form tries to be submitted.
                 </div>
                 <div id="tempAfterWrapper">
                     <label for="airTempAfter">Air Temperature</label>
-                    <input name="airTempAfter" type="number" id="airTempAfter" style="width: 50px" required>
-                    <select name="unitsTempAfter" id="unitsTempAfter" required>
+                    <input name="airTempAfter" type="number" id="airTempAfter" style="width: 50px">
+                    <select name="unitsTempAfter" id="unitsTempAfter">
                         <option></option>
                         <option>&deg;C</option>
                         <option>&deg;F</option>
@@ -619,7 +619,7 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="cloudCoverAfter">Cloud Cover</label>
-                    <select name="cloudCoverAfter" id="cloudCoverAfter" required>
+                    <select name="cloudCoverAfter" id="cloudCoverAfter">
                         <option></option>
                         <option value="clear">Clear</option>
                         <option value="partlyCloudy">Partly Cloudy</option>
@@ -630,7 +630,7 @@ they will update when the form tries to be submitted.
                 <label class="InjuriesFldsetHeader">Water Description</label>
                 <div>
                     <label for="waterFlowAfter">Water Flow</label>
-                    <select name="waterFlowAfter" id="waterFlowAfter" required>
+                    <select name="waterFlowAfter" id="waterFlowAfter">
                         <option></option>
                         <option value="0">None</option>
                         <option value="low">Low</option>
@@ -640,7 +640,7 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="waterTurbidityAfter">Turbidity</label>
-                    <select name="waterTurbidityAfter" id="waterTurbidityAfter" required>
+                    <select name="waterTurbidityAfter" id="waterTurbidityAfter">
                         <option></option>
                         <option value="clear">Clear</option>
                         <option value="hazy">Hazy</option>
@@ -649,25 +649,25 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="waterDescColorAfter">Describe the color:</label> 
-                    <input name="waterDescColorAfter" type="text" id="waterDescColorAfter" required>
+                    <input name="waterDescColorAfter" type="text" id="waterDescColorAfter">
                 </div>
                 <div>
                     <label for="dischargeAfter">Visible Discharge?</label>
                     <label for="YDA">Yes</label>
-                    <input type="radio" id="YDA" name="dischargeAfter" class="DA" required>
+                    <input type="radio" id="YDA" name="dischargeAfter" class="DA">
                     <label for="NDA">No</label>
                     <input type="radio" id="NDA" name="dischargeAfter" class="DA">
                 </div>
                 <div>
                     <label for="scumAfter">Surface Scum Present?</label>
                     <label for="YSA">Yes</label>
-                    <input type="radio" id="YSA" name="scumAfter" class="SA" required>
+                    <input type="radio" id="YSA" name="scumAfter" class="SA">
                     <label for="NSA">No</label>
                     <input type="radio" id="NSA" name="scumAfter" class="SA">
                 </div>
                 <div>
                     <label for="WaterDescOdorAfter">Describe any odor present:</label> 
-                    <input name="WaterDescOdorAfter" type="text" id="WaterDescOdorAfter" required>
+                    <input name="WaterDescOdorAfter" type="text" id="WaterDescOdorAfter">
                 </div>
             </div>
         </div>
@@ -681,17 +681,21 @@ they will update when the form tries to be submitted.
         </div>
         <h3 id="waterSamplesTab">Water Sample Stations <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
         <div id="waterSamplesExpand">
-            This section has not been implemented yet. You will need to submit a water sample station form.
+            <div id="addPeopleContainer">
+                <input type="button" value="Add a Station" id="addWaterSampleStations">
+            </div>
+            <div id="waterSampleStationsContainer">
+            </div>
         </div>
         <h3 id="commentsTab">Comments <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
         <div id="commentsExpand">
             <div style="height: 255px">
               <label for="comments">Type any comments or narratives regarding the investigation:</label><br>
-              <textarea name="comments" id="comments" cols="100" required></textarea>
+              <textarea name="comments" id="comments" cols="100"></textarea>
             </div>
             <div style="height: 255px">
               <label for="actions">Describe any corrective action needed:</label><br>
-              <textarea name="actions" id="actions" cols="100" required></textarea>
+              <textarea name="actions" id="actions" cols="100"></textarea>
             </div>
         </div>
     </div>
@@ -720,7 +724,7 @@ they will update when the form tries to be submitted.
 <script type="text/javascript" src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 <script type="text/javascript" src="js/regexPlugin.js"></script>
 <script type="text/javascript" src="js/parsley.min.js"></script>
-<script type="text/javascript" src="js/parsleyTest.js"></script>
+<script type="text/javascript" src="js/parsleyTestMin.js"></script>
 <script type="text/javascript" src="js/dataCollection.js"></script>
 <script type="text/javascript" src="js/fromIndex.js"></script>
 <script type="text/javascript" src="js/jquery.timepicker.min.js"></script>
