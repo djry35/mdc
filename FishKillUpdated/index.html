@@ -217,28 +217,30 @@ they will update when the form tries to be submitted.
                 <div class="notifiedPerson" id="notified1">
                     <label class='notifiedPersonHeader'>Person Information</label>
                     <div class="inputWrapper">
-                        <label for="agencyNotified" class="txtFieldHeader">Agency</label>
-                        <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" 
-                            value="DNR-EER" disabled>
+                        <label for="agencyNotified1" class="txtFieldHeader">Agency</label>
+                        <!-- <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" 
+                            value="DNR-EER" disabled> -->
+                            <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" 
+                            value="DNR-EER">
                     </div>
                     <div class="inputWrapper">
-                        <label for="personNotified" class="txtFieldHeader">Name</label>
+                        <label for="personNotified1" class="txtFieldHeader">Name</label>
                         <input name="personNotified1" class="txtFieldInput" id="personNotified1">
                     </div>
                     <div class="inputWrapper">
-                        <label for="phoneNotified" class="txtFieldHeader">Phone</label>
+                        <label for="phoneNotified1" class="txtFieldHeader">Phone</label>
                         <input name="phoneNotified1" type="tel" class="txtFieldInput" id="phoneNotified1">
                     </div>
                     <div class="inputWrapper">
-                        <label for="emailNotified" class="txtFieldHeader">Email</label>
+                        <label for="emailNotified1" class="txtFieldHeader">Email</label>
                         <input name="emailNotified1" class="txtFieldInput" id="emailNotified1">
                     </div>
                     <div class="inputWrapper">
-                        <label for="dateNotified" class="txtFieldHeader">Date</label>
+                        <label for="dateNotified1" class="txtFieldHeader">Date</label>
                         <input name="dateNotified1" class="txtFieldInput dateInput" id="dateNotified1" readonly style="background-color: #fff !important; cursor: text !important">
                     </div>
                     <div class="inputWrapper">
-                        <label class="txtFieldHeader">Time</label>
+                        <label for="timeNotified1" class="txtFieldHeader">Time</label>
                         <input name="timeNotified1" id="timeNotified1" class="timeInput txtFieldInput" style="width: 90px">
                     </div>
                 </div>
@@ -249,81 +251,81 @@ they will update when the form tries to be submitted.
             <div id="pollutants">
                 <div>
                     <label for="agOps">Agriculture Operations</label>
-                    <input type="checkbox" name="pollutionCat[]" id="agOps" class="pollutionCat">
+                    <input type="checkbox" name="pollutionCategory" id="agOps" value="agOps" class="pollutionCat">
                     <div id="agOpsOptions" hidden>
                         <label for="fertilizer">Fertilizer</label> 
-                        <input name="agPollution[]" type="checkbox" class="agPollution" id="fertilizer">
+                        <input name="agOpsSubcategory" type="checkbox" value="Fertilizer" class="agPollution" id="fertilizer">
                         <label for="pesticide">Pesticide</label> 
-                        <input name="agPollution[]" type="checkbox" class="agPollution" id="pesticide">
+                        <input name="agOpsSubcategory" type="checkbox" class="agPollution" id="pesticide">
                         <label for="manure">Manure</label>  
-                        <input name="agPollution[]" type="checkbox" class="agPollution" id="manure">
+                        <input name="agOpsSubcategory" type="checkbox" value="Manure" class="agPollution" id="manure">
                         <label for="agOtherPol">Other</label>  
-                        <input name="agPollution[]" type="checkbox" class="agPollution otherSelection" id="agOtherPol">
+                        <input name="agOpsSubcategory" type="checkbox" value="Other" class="agPollution otherSelection" id="agOtherPol">
                         <div class="otherSpecs" id="agOtherDesc" hidden>
-                            (optional) Specify: <input type="text" name="agPollution[]" id="agOtherSpec">
+                            (optional) Specify: <input type="text" name="agOtherSpec" id="agOtherSpec">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="indOps">Industrial Operations</label> 
-                    <input type="checkbox" name="pollutionCat[]" id="indOps" class="pollutionCat">
+                    <input type="checkbox" name="pollutionCategory" id="indOps" value="indOps" class="pollutionCat">
                     <div id="indOpsOptions" hidden>
                         <label for="chemical">Chemical</label>
-                        <input name="indPollution[]" type="checkbox" class="indPollution" id="chemical">
+                        <input name="indOpsSubcategory" type="checkbox" value="Chemical" class="indPollution" id="chemical">
                         <label for="petroleum">Petroleum</label>
-                        <input name="indPollution[]" type="checkbox" class="indPollution" id="petroleum">
+                        <input name="indOpsSubcategory" type="checkbox" value="Petroleum" class="indPollution" id="petroleum">
                         <label for="metals">Metals</label>
-                        <input name="indPollution[]" type="checkbox" class="indPollution" id="metals">
+                        <input name="indOpsSubcategory" type="checkbox" value="Metals" class="indPollution" id="metals">
                         <label for="indOtherPol">Other</label>
-                        <input name="indPollution[]" type="checkbox" class="indPollution otherSelection" id="indOtherPol">
+                        <input name="indOpsSubcategory" type="checkbox" value="Other" class="indPollution otherSelection" id="indOtherPol">
                         <div class="otherSpecs" id="indOtherDesc" hidden>
-                            (optional) Specify: <input name="indPollution[]" type="text" id="indOtherSpec">
+                            (optional) Specify: <input name="indOtherSpec" type="text" id="indOtherSpec">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="munOps">Municipal Operations</label> 
-                    <input name="pollutionCat[]" type="checkbox" id="munOps" class="pollutionCat">
+                    <input name="pollutionCategory" type="checkbox" id="munOps" value="munOps" class="pollutionCat">
                     <div id="munOpsOptions" hidden>
                         <label for="power">Power</label>
-                        <input name="munPollution[]" type="checkbox" class="munPollution" id="power">
+                        <input name="munOpsSubcategory" type="checkbox" value="Power" class="munPollution" id="power">
                         <label for="refuse">Refuse</label>
-                        <input name="munPollution[]" type="checkbox" class="munPollution" id="refuse">
+                        <input name="munOpsSubcategory" type="checkbox" value="Refuse" class="munPollution" id="refuse">
                         <label for="sewage">Sewage</label>
-                        <input name="munPollution[]" type="checkbox" class="munPollution" id="sewage">
+                        <input name="munOpsSubcategory" type="checkbox" value="Sewage" class="munPollution" id="sewage">
                         <label for="munOtherPol">Other</label>
-                        <input name="munPollution[]" type="checkbox" class="munPollution otherSelection" id="munOtherPol">
+                        <input name="munOpsSubcategory" type="checkbox" value="Other" class="munPollution otherSelection" id="munOtherPol">
                         <div class="otherSpecs" id="munOtherDesc" hidden>
-                            (optional) Specify: <input type="text" name="munPollution[]" id="munOtherSpec">
+                            (optional) Specify: <input type="text" name="munOtherSpec" id="munOtherSpec">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="transOps">Transportation Operations</label>
-                    <input name="pollutionCat[]" type="checkbox" id="transOps" class="pollutionCat">
+                    <input name="pollutionCategory" type="checkbox" id="transOps" value="transOps" class="pollutionCat">
                     <div id="transOpsOptions" hidden>
                         <label for="pipeline">Pipeline</label>
-                        <input name="transPollution[]" type="checkbox" class="transPollution" id="pipeline">
+                        <input name="transOpsSubcategory" type="checkbox" value="Pipeline" class="transPollution" id="pipeline">
                         <label for="truck">Truck</label>
-                        <input name="transPollution[]" type="checkbox" class="transPollution" id="truck">
+                        <input name="transOpsSubcategory" type="checkbox" value="Truck" class="transPollution" id="truck">
                         <label for="rail">Rail</label>
-                        <input name="transPollution[]" type="checkbox" class="transPollution" id="rail">
+                        <input name="transOpsSubcategory" type="checkbox" value="Rail" class="transPollution" id="rail">
                         <label for="transOtherPol">Other</label>
-                        <input name="transPollution[]" type="checkbox" class="transPollution otherSelection" id="transOtherPol">
+                        <input name="transOpsSubcategory" type="checkbox" value="Other" class="transPollution otherSelection" id="transOtherPol">
                         <div class="otherSpecs" id="transOtherDesc" hidden>
-                            (optional) Specify: <input name="transPollution[]" type="text" id="transOtherSpec">
+                            (optional) Specify: <input name="transOtherSpec" type="text" id="transOtherSpec">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="naturalPol">Natural</label>
-                    <input name="pollutionCat[]" type="checkbox" id="naturalPol">
+                    <input name="pollutionCategory" type="checkbox" value="Natural" class="pollutionCat" id="naturalPol">
                     <label for="otherPol">Other</label>
-                    <input name="pollutionCat[]" type="checkbox" class="otherPollution otherSelection" id="otherPol">
+                    <input name="pollutionCategory" type="checkbox" value="Other" class="pollutionCat otherPollution otherSelection" id="otherPol">
                     <label for="unknownPol">Unknown</label>
-                    <input name="pollutionCat[]" type="checkbox" id="unknownPol">
+                    <input name="pollutionCategory" type="checkbox" value="Unknown" class="pollutionCat" id="unknownPol">
                     <label for="nonePol">None</label>
-                    <input name="pollutionCat[]" type="checkbox" id="nonePol">
+                    <input name="pollutionCategory" type="checkbox" value="None" class="pollutionCat" id="nonePol">
                 </div>
             </div>
             <div style="height: 190px; margin-top: 40px">
@@ -347,20 +349,20 @@ they will update when the form tries to be submitted.
             <div>
                 <label for="moWatersContamination">Are Missouri waters contaminated?</label>
                 <label for="YWC">Yes</label>
-                <input type="radio" id="YWC" name="moWatersContamination" class="MWC">
+                <input type="radio" id="YWC" name="moWatersContamination" value="Yes" class="MWC">
                 <label for="NWC">No</label>
-                <input type="radio" id="NWC" name="moWatersContamination" class="MWC">
+                <input type="radio" id="NWC" name="moWatersContamination" value="No" class="MWC">
                 <label for="UWC">Unknown</label>
-                <input type="radio" id="UWC" name="moWatersContamination" class="MWC">
+                <input type="radio" id="UWC" name="moWatersContamination" value="Unknown" class="MWC">
             </div>
             <div>
                 <label for="groundwaterContamination">Is there evidence of groundwater contamination?</label>
                 <label for="YGW">Yes</label>
-                <input type="radio" id="YGW" name="groundwaterContamination" class="GWC">
+                <input type="radio" id="YGW" name="groundwaterContamination" value="Yes" class="GWC">
                 <label for="NGW">No</label>
-                <input type="radio" id="NGW" name="groundwaterContamination" class="GWC">
+                <input type="radio" id="NGW" name="groundwaterContamination" value="No" class="GWC">
                 <label for="UGW">Unknown</label>
-                <input type="radio" id="UGW" name="groundwaterContamination" class="GWC">
+                <input type="radio" id="UGW" name="groundwaterContamination" value="Unknown" class="GWC">
             </div>
         </div>
         <h3 id="injuriesTab">Injuries to Fish and Wildlife</h3>
@@ -379,32 +381,32 @@ they will update when the form tries to be submitted.
             <div id="species">
                 <label class="InjuriesFldsetHeader">Specify all species found dead</label><br>
                 <label for="bass">Bass</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkBox" id="bass">
+                <input name="speciesCategory" value="bass" class='SpeciesNaturalKill' type="checkBox" id="bass">
                 <label for="bullheads">Bullheads</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="bullheads">
+                <input name="speciesCategory" value="bullheads" class='SpeciesNaturalKill' type="checkbox" id="bullheads">
                 <label for="carp">Carp</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="carp">
+                <input name="speciesCategory" value="carp" class='SpeciesNaturalKill' type="checkbox" id="carp">
                 <label for="catfish">Catfish</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="catfish">
+                <input name="speciesCategory" value="catfish" class='SpeciesNaturalKill' type="checkbox" id="catfish">
                 <label for="crappie">Crappie</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="crappie">
+                <input name="speciesCategory" value="crappie" class='SpeciesNaturalKill' type="checkbox" id="crappie">
                 <label for="darters">Darters</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="darters">
+                <input name="speciesCategory" value="darters" class='SpeciesNaturalKill' type="checkbox" id="darters">
                 <label for="madtoms">Madtoms</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="madtoms">
+                <input name="speciesCategory" value="madtoms" class='SpeciesNaturalKill' type="checkbox" id="madtoms">
                 <br>
                 <label for="minnows">Minnows</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="minnows">
+                <input name="speciesCategory" value="minnows" class='SpeciesNaturalKill' type="checkbox" id="minnows">
                 <label for="shad">Shad</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="shad">
+                <input name="speciesCategory" value="shad" class='SpeciesNaturalKill' type="checkbox" id="shad">
                 <label for="sunfish">Sunfish</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="sunfish">
+                <input name="speciesCategory" value="sunfish" class='SpeciesNaturalKill' type="checkbox" id="sunfish">
                 <label for="suckers">Suckers</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="suckers">
+                <input name="speciesCategory" value="suckers" class='SpeciesNaturalKill' type="checkbox" id="suckers">
                 <label for="whiteBass">WhiteBass</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="whiteBass">
+                <input name="speciesCategory" value="whiteBass" class='SpeciesNaturalKill' type="checkbox" id="whiteBass">
                 <label for="otherSpeciesDead">Other</label> 
-                <input name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="otherSpeciesDead">
+                <input name="speciesCategory" value="other" class='SpeciesNaturalKill' type="checkbox" id="otherSpeciesDead">
                 <div class="otherSpecs" id="speciesDeadOther" hidden>
                     Please specify other species: <input name="otherSpeciesDeadSpec" type="text" id="otherSpeciesDeadSpec">
                 </div>
@@ -435,26 +437,26 @@ they will update when the form tries to be submitted.
             <div id="injuries" hidden>
                 <label class="InjuriesFldsetHeader">Injuries</label><br>
                 <label for="Abrasions">Abrasions</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="Abrasions">
+                <input name="injuryCategory" value="Abrasions" class="fishInjury" type="checkbox" id="Abrasions">
                 <label for="Bleeding">Bleeding</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="Bleeding">
+                <input name="injuryCategory" value="Bleeding" class="fishInjury" type="checkbox" id="Bleeding">
                 <label for="Bloating">Bloating</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="Bloating">
+                <input name="injuryCategory" value="Bloating" class="fishInjury" type="checkbox" id="Bloating">
                 <label for="ForwardFin">ForwardFin</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="ForwardFin">
+                <input name="injuryCategory" value="ForwardFin" class="fishInjury" type="checkbox" id="ForwardFin">
                 <label for="Lacerations">Lacerations</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="Lacerations">
+                <input name="injuryCategory" value="Lacerations" class="fishInjury" type="checkbox" id="Lacerations">
                 <br>
                 <label for="Lesions">Lesions</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="Lesions">
+                <input name="injuryCategory" value="Lesions" class="fishInjury" type="checkbox" id="Lesions">
                 <label for="BodyParts">BodyParts</label>    
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="BodyParts">
+                <input name="injuryCategory" value="BodyParts" class="fishInjury" type="checkbox" id="BodyParts">
                 <label for="Pop-eye">Pop-eye</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="Pop-eye">
-                <label for="Color">Color</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="Color">
+                <input name="injuryCategory" value="Pop-eye" class="fishInjury" type="checkbox" id="Pop-eye">
+                <label for="Color">Unusual Color</label> 
+                <input name="injuryCategory" value="Color" class="fishInjury" type="checkbox" id="Color">
                 <label for="injuryOther">Other</label> 
-                <input name="fishInjuries[]" class="fishInjury" type="checkbox" id="injuryOther">
+                <input name="injuryCategory" value="injuryOther" class="fishInjury" type="checkbox" id="injuryOther">
                 <div class="otherSpecs" id="injuriesOther" hidden>
                     Please specify other injuries: <input name="injuryOtherSpec" type="text" id="injuryOtherSpec">
                 </div>
@@ -464,17 +466,17 @@ they will update when the form tries to be submitted.
             <div id="behaviors">
                 <label class="InjuriesFldsetHeader">Live Fish Behavior</label><br>
                 <label for="Normal">Normal</label> 
-                <input name="fishBehaviors[]" type="checkbox"  class="behavior" id="Normal">
+                <input name="behaviorCategory" type="checkbox" value="Normal" class="behavior" id="Normal">
                 <label for="Convulsive">Convulsive</label> 
-                <input name="fishBehaviors[]" type="checkbox" class="behavior" id="Convulsive">
+                <input name="behaviorCategory" type="checkbox" value="Convulsive" class="behavior" id="Convulsive">
                 <label for="Lethargic">Lethargic</label> 
-                <input name="fishBehaviors[]" type="checkbox" class="behavior" id="Lethargic">
+                <input name="behaviorCategory" type="checkbox" value="Lethargic" class="behavior" id="Lethargic">
                 <label for="Jumping">Jumping</label> 
-                <input name="fishBehaviors[]" type="checkbox" class="behavior" id="Jumping">
+                <input name="behaviorCategory" type="checkbox" value="Jumping" class="behavior" id="Jumping">
                 <label for="Piping">Piping</label> 
-                <input name="fishBehaviors[]" type="checkbox" class="behavior" id="Piping">
+                <input name="behaviorCategory" type="checkbox" value="Piping" class="behavior" id="Piping">
                 <label for="behaviorOther">Other</label> 
-                <input name="fishBehaviors[]" type="checkbox" class="behavior" id="behaviorOther">
+                <input name="behaviorCategory" type="checkbox" value="Other" class="behavior" id="behaviorOther">
                 <div class="otherSpecs" id="behaviorsOther" hidden>
                     Please specify other behaviors: <input name="OtherBehaviorSpec" type="text" id="OtherBehaviorSpec">
                 </div>
@@ -507,9 +509,9 @@ they will update when the form tries to be submitted.
                 <div>
                     <label for="precipitationDuring">Precipitation?</label>
                     <label for="YPD">Yes</label>
-                    <input type="radio" id="YPD" name="precipitationDuring" class="PD">
+                    <input type="radio" id="YPD" value="Yes" name="precipitationDuring" class="PD">
                     <label for="NPD">No</label>
-                    <input type="radio" id="NPD" name="precipitationDuring" class="PD">
+                    <input type="radio" id="NPD" value="No" name="precipitationDuring" class="PD">
                 </div>
                 <div id="tempDuringWrapper">
                     <label for="airTempDuring">Air Temperature</label>
@@ -557,16 +559,16 @@ they will update when the form tries to be submitted.
                 <div>
                     <label for="dischargeDuring">Visible Discharge?</label>
                     <label for="YDD">Yes</label>
-                    <input type="radio" id="YDD" name="dischargeDuring" class="DD">
+                    <input type="radio" id="YDD" name="dischargeDuring" value="Yes" class="DD">
                     <label for="NDD">No</label>
-                    <input type="radio" id="NDD" name="dischargeDuring" class="DD">
+                    <input type="radio" id="NDD" name="dischargeDuring" value="No" class="DD">
                 </div>
                 <div>
                     <label for="scumDuring">Surface Scum Present?</label>
                     <label for="YSD">Yes</label>
-                    <input type="radio" id="YSD" name="scumDuring" class="SD">
+                    <input type="radio" id="YSD" name="scumDuring" value="Yes" class="SD">
                     <label for="NSD">No</label>
-                    <input type="radio" id="NSD" name="scumDuring" class="SD">
+                    <input type="radio" id="NSD" name="scumDuring" value="No" class="SD">
                 </div>
                 <div>
                     <label for="waterDescOdorDuring">Describe any odor present:</label> 
@@ -579,9 +581,9 @@ they will update when the form tries to be submitted.
                 <div>
                     <label for="precipitationAfter">Precipitation?</label>
                     <label for="YPA">Yes</label>
-                    <input type="radio" id="YPA" name="precipitationAfter" class="PA">
+                    <input type="radio" id="YPA" name="precipitationAfter" value="Yes" class="PA">
                     <label for="NPA">No</label>
-                    <input type="radio" id="NPA" name="precipitationAfter" class="PA">
+                    <input type="radio" id="NPA" name="precipitationAfter" value="No" class="PA">
                     <div id="precAmt" hidden>
                         <label for="precAmtSpec">Specify amount:</label>
                         <input name="precAmtSpec" type="number" id="precAmtSpec"> inches
@@ -633,16 +635,16 @@ they will update when the form tries to be submitted.
                 <div>
                     <label for="dischargeAfter">Visible Discharge?</label>
                     <label for="YDA">Yes</label>
-                    <input type="radio" id="YDA" name="dischargeAfter" class="DA">
+                    <input type="radio" id="YDA" name="dischargeAfter" value="Yes" class="DA">
                     <label for="NDA">No</label>
-                    <input type="radio" id="NDA" name="dischargeAfter" class="DA">
+                    <input type="radio" id="NDA" name="dischargeAfter" value="No" class="DA">
                 </div>
                 <div>
                     <label for="scumAfter">Surface Scum Present?</label>
                     <label for="YSA">Yes</label>
-                    <input type="radio" id="YSA" name="scumAfter" class="SA">
+                    <input type="radio" id="YSA" name="scumAfter" value="Yes" class="SA">
                     <label for="NSA">No</label>
-                    <input type="radio" id="NSA" name="scumAfter" class="SA">
+                    <input type="radio" id="NSA" name="scumAfter" value="No" class="SA">
                 </div>
                 <div>
                     <label for="WaterDescOdorAfter">Describe any odor present:</label> 

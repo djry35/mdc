@@ -3,6 +3,7 @@ $("#submitBtn").button();
 $("#submitBtn").click(
 	function(event) {
 		collectData();
+		return false;
 	}
 )
 
@@ -12,27 +13,23 @@ function collectData()
 
 	$("input, textarea").each(
 		function() {
-			masterJSON.push($(this).attr('id') + " : " + $(this).val());
+			if($(this).attr('type') != "radio" || $(this).attr('type') != "checkbox")
+
+				masterJSON.push($(this).attr('id') + " : " + $(this).val());
 		});
 	$("select").each(
 		function() {
 			masterJSON.push($(this).attr('id') + " : " + $(this).val());
 		});
 
-	var radioSets = [];
-	$("input[type='radio']").each(
-		function() { 
-			if($.inArray($(this)[0].name, radioSets) < 0)
-			{
-				radioSets.push($(this)[0].name);
-			}
-	});
-
-	for ( var i = 0; i < radioSets.length; i++ ) {
-		masterJSON.push($("input[name='" + radioSets[i] + "']:checked").attr('id'));
-	}
-
-	console.log(masterJSON);
+	/*$("input[type*='checkbox']").each(
+	
+		function() { console.log($(this)); }
+	);*/
+	//console.log(masterJSON);
+	console.log($("#formWrapper").serializeArray());
+	var arr = $("#formWrapper").serializeArray();
+	console.log(JSON.stringify(arr));
 }
 
 function loadData()

@@ -58,7 +58,7 @@ h4
 	text-decoration: underline;
 }
 
-.notifiedPersonHeader, .investigatedPersonHeader
+.notifiedPersonHeader, .investigatedPersonHeader, .sampleStationHeader
 {
 	width: 35%;
 	text-align: center;
@@ -82,7 +82,7 @@ h4
     padding-top: 3px;	
     margin-bottom: 20px;
 }
-.notifiedRemoveButton, .investigatedRemoveButton
+.notifiedRemoveButton, .investigatedRemoveButton, .stationRemoveButton
 {
 	margin-left: 12%;
 }
