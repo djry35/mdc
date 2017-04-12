@@ -1,3 +1,11 @@
+$("#submitBtn").button();
+
+$("#submitBtn").click(
+	function(event) {
+		collectData();
+	}
+)
+
 function collectData()
 {
 	var masterJSON = [];

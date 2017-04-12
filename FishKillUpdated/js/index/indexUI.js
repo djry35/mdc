@@ -43,8 +43,6 @@ $("#coordCategory").selectmenu({
 			$("#EndingUTM_X").attr("required", false);
 			$("#EndingUTM_Y").attr("required", false);
 		}
-		
-		$(this).parsley().validate();
 	}
 });
 $("#waterType").selectmenu();
