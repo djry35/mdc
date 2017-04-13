@@ -67,7 +67,11 @@ $("#form").accordion({
 	collapsible: true,
 	heightStyle: "content",
 	active: false,
-	icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }
+	icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" },
+	beforeActivate: function(event, ui) { 
+		if($("#form").accordion("option", "active") !== false)
+			saveData();
+	}
 });
 
 

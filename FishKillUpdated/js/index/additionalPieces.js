@@ -52,19 +52,20 @@ $("#addPeopleInvestigated").click(
 
 		var investigatedPerson = "<div class='inputWrapper'><label for='personInvestigated' class='txtFieldHeader'>Name</label><input class='txtFieldInput' name='personInvestigated" + num + "' id='personInvestigated" + num + "'></div>",
 			division = "<div class='inputWrapper'><label for='divisionInvestigated' class='txtFieldHeader'>Division</label><input name='divisionInvestigated" + num + "' class='txtFieldInput' id='divisionInvestigated" + num + "'></div>",
-			phone = "<div class='inputWrapper'><label for='phoneInvestigated' class='txtFieldHeader'>Phone</label><input type='tel' name='phoneInvestigated" + num + "' class='txtFieldInput' id='phoneInvestigated" + num + "' pattern='^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$'></div>",
-			hours = "<div class='inputWrapper'><label for='hoursInvestigated' class='txtFieldHeader'>Hours</label><input name='hoursInvestigated" + num + "' class='txtFieldInput' id='hoursInvestigated" + num + "' type='number'></div>",
+			phone = "<div class='inputWrapper'><label for='phoneInvestigated' class='txtFieldHeader'>Phone</label><input type='tel' name='phoneInvestigated" + num + "' class='txtFieldInput' id='phoneInvestigated" + num + "' pattern='^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$' style='width: 150px'></div>",
+			hours = "<div class='inputWrapper'><label for='hoursInvestigated' class='txtFieldHeader'>Hours</label><input name='hoursInvestigated" + num + "' class='txtFieldInput' id='hoursInvestigated" + num + "' type='number' style='width: 90px'></div>",
 			date = "<div class='inputWrapper'><label for='dateInvestigated' class='txtFieldHeader'>Date</label><input name='dateInvestigated" + num + "' class='txtFieldInput dateInput' id='dateInvestigated" + num + "'></div>",
+			checkbox = "<label for='fieldInvestigator" + num + "' style='margin-left:212px'>Field Investigator</label><input name='fieldInvestigator' value='fieldInvestigator' type='checkbox' id='fieldInvestigator" + num + "'>",
 			button = "<input type='button' class='investigatedRemoveButton' value='Remove this person' id='removeInvestigated" + num + "'>";
 
 		$("#investigativePeopleContainer").append(
 			"<div class='investigatedPerson' id='investigated" + num 
 			+ "'><label class='investigatedPersonHeader'>Person Information</label><div>" 
 			+ button + "</div>" + investigatedPerson + division + phone + hours + date 
-			+  "</div>");
+			+  checkbox + "</div>");
 
 		$("#dateInvestigated" + num).datepicker({ changeMonth: true, changeYear: true });
-
+		$("#fieldInvestigator" + num).checkboxradio();
 		$("#removeInvestigated" + num).button();
 		$(".investigatedRemoveButton").click(
 			function(event) {
@@ -107,6 +108,8 @@ $("#addWaterSampleStations").click(
 
 			time = "<div class='inputWrapper'><label for='stationTimeRecorded" + num + "' class='txtFieldHeader'>Time</label><input name='stationTimeRecorded" + num + "' class='timeInput txtFieldInput' id='stationTimeRecorded" + num + "' style='width: 90px'></div>",
 
+			
+
 			button = "<input type='button' class='stationRemoveButton' value='Remove this station' id='removeStation" + num + "'>";
 
 		$("#waterSampleStationsContainer").append(
@@ -116,7 +119,6 @@ $("#addWaterSampleStations").click(
 			+ DO + temp + pH + NH3 + comments + date + time + "</div>");
 
 		$("#dateRecorded" + num).datepicker({ changeMonth: true, changeYear: true });
-
 		$("#removeStation" + num).button();
 		$(".stationRemoveButton").click(
 			function(event) {

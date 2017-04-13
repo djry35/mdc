@@ -54,7 +54,7 @@
            <div class="navbar-right">
               <ul class="nav navbar-nav">
                  <li class="user">
-                    <a id="lastupdate">Last update: 04.07.2017</a>
+                    <a id="lastupdate">Last update: 04.13.2017</a>
                  </li>
               </ul>
            </div>
@@ -66,17 +66,8 @@
 Please fill out the form below. All fields are required unless otherwise noted.<br>
 If you need assistance filling out this form, contact Joel at Joel.Sartwell@mdc.mo.gov.
 <br><br><br>
-Expand the tabs to fill in the information. If errors are present,<br>
-they will update when the form tries to be submitted.
+Click the tabs to expand each section. Fill out as much as you can. <br>
 </div>
-
-<!-- Placeholders for dropdowns not needing specific labels to show. 
-    Put here in case there are many different blank labels.
-    (Should these be at the bottom? IDK) -->
-<label for="unitsTempAfter"></Label>
-<label for="unitsTempDuring"></Label>
-<label for="dmgUnits"></label>
-<label for="unitsTime"></label>
 
 <form id="formWrapper">
     <div id="form">
@@ -117,7 +108,7 @@ they will update when the form tries to be submitted.
             <div style="height:760px">
                 <h4>Investigation Details</h4>
                 <div>
-                    <div style="height: 200px">
+                    <div style="height: 85px">
                         <div class="inputWrapper">
                             <label for="investigationDate" class="txtFieldHeader">Date:</label>
                             <input type="text" name="investigationDate" class="txtFieldInput dateInput form-control" id="investigationDate" readonly style="background-color: #fff !important; cursor: text !important">
@@ -207,6 +198,9 @@ they will update when the form tries to be submitted.
                     <input name="waterbodyName" type="text" id="waterbodyName" class="txtFieldInput">
                 </div>
             </div>
+            <div>
+                <!-- reported by and observer -->
+            </div>
         </div>
         <h3 id="involvedTab">People Involved</h3>
         <div id="involvedExpand">
@@ -218,10 +212,7 @@ they will update when the form tries to be submitted.
                     <label class='notifiedPersonHeader'>Person Information</label>
                     <div class="inputWrapper">
                         <label for="agencyNotified1" class="txtFieldHeader">Agency</label>
-                        <!-- <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" 
-                            value="DNR-EER" disabled> -->
-                            <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" 
-                            value="DNR-EER">
+                        <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" value="DNR-EER">
                     </div>
                     <div class="inputWrapper">
                         <label for="personNotified1" class="txtFieldHeader">Name</label>
