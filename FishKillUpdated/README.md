@@ -14,7 +14,7 @@ Category: Descriptive Data
 	Reporter's Staff Title: string
 	Reporter's Address: string
 	Reporter's Zipcode: int
-	Reporter's Phone Number: varchar
+	Reporter's Phone Number: string (varied)
 	Date of Investigation: 'XX/XX/XXXX'
 	Time of Investigation: 'XX:XX[ap]m'
 	Nearest Town: string
@@ -27,7 +27,7 @@ Category: People Involved
 	Agency: string
 	First Name: string
 	Last Name: string
-	Phone: varchar
-	Email: varchar
+	Phone: string (varied)
+	Email: string (varied)
 	Date: 'XX/XX/XXXX'
 	
