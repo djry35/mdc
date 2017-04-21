@@ -78,7 +78,7 @@ ZZZUnapprovedAgencies
 		Type: varchar(50)
 		NULLable: no
 		The agency awaiting approval. Through the web application, the admin approves agencies by verifying the full fishkill application submitted by field staff. Other applications will have their AI to detect when agencies are approved.
-		Once approved, the field will be deleted from this table and added to ZZZAgencies.
+		Once approved, the field will be deleted from this table. All unapproved agencies are still in the primary table of agencies and treated as approved for database purposes.
 ZZZAgencies
 	Name (PRIMARY KEY)
 		Type: varchar(50)
@@ -209,7 +209,7 @@ ZZZInvestigationRecords
 	PollutantAgent
 		Type: varchar(50)
 		NULLable: yes
-		The name of the pollutant itself involved.
+		The name of the pollutant itself involved. Separate from its categories.
 	PollutantQuantity
 		Type: int
 		NULLable: yes
@@ -535,7 +535,7 @@ ZZZUnapprovedSubcategories
 	Name
 		Type: varchar(50)
 		NULLable: no
-		The subcategory for the pollutant awaiting approval. Used for autofilling and standardization. See ZZZUnapprovedAgencies.
+		The subcategory for the pollutant awaiting approval. Used for autofilling and standardization. See ZZZUnapprovedAgencies. This is different than the others in that no foreign keys are generated for this table; approval will involve a more manual process. 
 	ParentCategory
 		Type: varchar(50)
 		NULLable: no
