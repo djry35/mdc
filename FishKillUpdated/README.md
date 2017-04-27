@@ -136,6 +136,7 @@ Environmental Conditions
 		Values: int
 	Air Temperature Units
 		Values: C/F
+		Goes with the air temp above. 
 	Cloud Cover
 		Values: Clear/Partly Cloudy/Overcast
 	Water Flow
@@ -144,12 +145,14 @@ Environmental Conditions
 		Values: Clear/Hazy/Opaque
 	Color
 		Values: string
+		All submitters can have different descriptions, so this is not standardized.
 	Visible Discharge?
 		Values: Yes/No
 	Surface Scum?
 		Values: Yes/No
 	Odor
 		Values: string
+		See color.
 ----The fields above are repeated regarding 24 hours before the investigation----
 ----There is one extra field for the 24 hour before period:
 	Precipitation Amount
@@ -164,6 +167,7 @@ Investigative Time
 		Values: string
 	Division
 		Values: string
+		Has suggested values. 
 	Phone
 		Values: string, unformatted
 	Hours
@@ -180,6 +184,7 @@ Water Sample Stations
 		Values: string
 	County
 		Values: string
+		Suggested values given. 
 	DO (mg/L)
 		Values: varied number
 	Temperature
