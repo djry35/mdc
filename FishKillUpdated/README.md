@@ -12,6 +12,7 @@ fields are required to distinguishbetween investigation records and their submit
 The form has the following fields in 'index.html':
 
 Descriptive Data
+---These fields are information about the person submitting the report at the moment.
 	Reporter's First Name 
 		Values: string
 	Reporter's Last Name 
@@ -24,28 +25,41 @@ Descriptive Data
 		Values: int
 	Reporter's Phone Number 
 		Values: string, not formatted
+---Below are details regarding the investigation.
 	Date of Investigation 
 		Values: 'XX/XX/XXXX'
 	Time of Investigation 
 		Values: 'XX:XX[ap]m'
 	Nearest Town 
 		Values: string
-	County Location 
+		Possible values are suggested from archived reports.
+	County  
 		Values: string
+		Possible values also suggested from archived reports.
 	Location Detail 
-		Values: Plot Line/Single Point/Diagram
+		Values: Plot Line/Single Point
+		Used to identify the specific location of the investigation. 
+		Combines with the coordinates below to mark the location.
+	Coordinates
+		Values: varied
+		Combined with the location detail above. When the above is specified,
+		input fields are shown to accompany the selection: 2 sets of points for 
+		a plot line, 1 set for the single point. 
 	Legal Descriptors 
 		Values: specified, ints
+		The TN/RW/S values that can be given to help with location specifications. 
 	Type of Waterbody 
 		Values: Lake/Pond/Stream/Wetland/Backwater/None
 	Waterbody Name 
 		Values: string
+		Suggested values done similar to the above fields. 
 
 People Involved
 ---Multiple people can be specified. Each field has a suffixed number to 
 ---denote which involved person has the field. 
 	Agency 
 		Values: string
+		Suggested values applied. 
 	First Name 
 		Values: string
 	Last Name 
@@ -62,6 +76,8 @@ People Involved
 Pollution Source
 	Categories of the pollution
 		Values: (varied)
+		Various categories and subcategories can be specified by the submitter and 
+		are all included in the submitted JSON, separated by values with the same name. 
 	Cause/Agent 
 		Values: string
 	Source 
@@ -78,26 +94,37 @@ Pollution Source
 Injuries to Fish and Wildlife
 	Other dead animals present 
 		Values: 'on' or no value
+		If the box isn't checked, it's assumed the value is false, thus it is left
+		out of the JSON in that case. 
 	Fish killed by natural causes 
 		Values: 'on' or no value
+		Philosophy similar to above. 
 	Number dead in natural kill 
 		Values: int
+		Associated with the above checkbox. Only shows if above is checked. 
 	Species specified
 		Values: (varied)
+		Similar to pollutant categories, species share the name in the JSON.
 	State of Decay 
 		Values: Fresh Dead/Slight Decay/Heavy Decay
 	Live Fish Present 
 		Values: 'on' or no value
+		Philosophy similar to like-value fields.
 	Injuries Observed 
 		Values: 'on' or no value
+		Philosophy similar to like-value fields.
 	Injuries Specified
 		Values: (varied)
+		Similar logic to like-value fields. Injuries only show if the above checkbox
+		is checked. 
 	Live Fish Behaviors
 		Values: (varied)
+		Similar logic to like-value fields. 
 	Extent of Damage 
 		Values: int
 	Damage Units 
 		Values: miles/acres/feet
+		Goes with the above value. 
 	Duration of Effects 
 		Values: int
 

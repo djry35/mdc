@@ -23,16 +23,6 @@ $("#coordCategory").selectmenu({
 			$("#EndingUTM_X").attr("required", false);
 			$("#EndingUTM_Y").attr("required", false);
 		}
-		else if(selected == "map") 
-		{ 
-			$("#map").removeAttr("hidden");
-			$("#lineStart").attr("hidden", true);
-			$("#StartingUTM_X").attr("required", true);
-			$("#StartingUTM_Y").attr("required", true);
-			$("#lineEnd").attr("hidden", true);
-			$("#EndingUTM_X").attr("required", false);
-			$("#EndingUTM_Y").attr("required", false);
-		}
 		else
 		{
 			$("#map").attr("hidden", true);
@@ -52,7 +42,7 @@ $(".pollutionCat, .agPollution, .indPollution, .munPollution, .transPollution").
 $("#naturalPol, #unknownPol, #nonePol, #otherPol").checkboxradio({ icon: false });
 $(".MWC, .GWC, .PD, .PA, .SA, .SD, .DD, .DA").checkboxradio({ icon: false });
 $(".SpeciesNaturalKill, .fishInjury, .behavior").checkboxradio({ icon: false });
-$("#otherDead, #fishDead, #liveFishPresent, #injuriesObserved").checkboxradio({ icon: false });
+$("#otherDead, #fishDead, #liveFishPresent, #injuriesObserved").checkboxradio();
 
 $("#stateOfDecay").selectmenu();
 $("#dmgUnits, #unitsTime").selectmenu();
