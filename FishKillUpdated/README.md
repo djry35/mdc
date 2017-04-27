@@ -6,32 +6,173 @@ FRONT-END UI:
 
 The model component has two pages ('about' page might be added later): the admin and main submission page. The admin page is a projection of submitted forms, editable by the admin only. The submissions page can be accessed by staff to submit their reports digitally. 
 
+NOTE: very few fields are required at this time. Only certain necessary 
+fields are required to distinguishbetween investigation records and their submitters. 
+
 The form has the following fields in 'index.html':
 
-Category: Descriptive Data
-	Reporter's First Name: string
-	Reporter's Last Name: string
-	Reporter's Staff Title: string
-	Reporter's Address: string
-	Reporter's Zipcode: int
-	Reporter's Phone Number: string (varied)
-	Date of Investigation: 'XX/XX/XXXX'
-	Time of Investigation: 'XX:XX[ap]m'
-	Nearest Town: string
-	County Location: string
-	Location Detail: (varied)
-	Legal Descriptors: (varied)
-	Type of Waterbody: string
-	Waterbody Name: string
-Category: People Involved
-	Agency: string
-	First Name: string
-	Last Name: string
-	Phone: string (varied)
-	Email: string (varied)
-	Date: 'XX/XX/XXXX'
+Descriptive Data
+	Reporter's First Name 
+		Values: string
+	Reporter's Last Name 
+		Values: string
+	Reporter's Staff Title 
+		Values: string
+	Reporter's Address 
+		Values: string
+	Reporter's Zipcode 
+		Values: int
+	Reporter's Phone Number 
+		Values: string, not formatted
+	Date of Investigation 
+		Values: 'XX/XX/XXXX'
+	Time of Investigation 
+		Values: 'XX:XX[ap]m'
+	Nearest Town 
+		Values: string
+	County Location 
+		Values: string
+	Location Detail 
+		Values: Plot Line/Single Point/Diagram
+	Legal Descriptors 
+		Values: specified, ints
+	Type of Waterbody 
+		Values: Lake/Pond/Stream/Wetland/Backwater/None
+	Waterbody Name 
+		Values: string
 
+People Involved
+---Multiple people can be specified. Each field has a suffixed number to 
+---denote which involved person has the field. 
+	Agency 
+		Values: string
+	First Name 
+		Values: string
+	Last Name 
+		Values: string
+	Phone 
+		Values: string, unformatted
+	Email 
+		Values: string, unformatted
+	Date 
+		Values: 'XX/XX/XXXX'
+	Time 
+		Values: 'XX:XX[ap]m'
 
+Pollution Source
+	Categories of the pollution
+		Values: (varied)
+	Cause/Agent 
+		Values: string
+	Source 
+		Values: string
+	Quantity 
+		Values: string
+	Spill Date 
+		Values: 'XX/XX/XXXX'
+	MOWatersContaminated 
+		Values: Yes/No/Unknown
+	Evidence of groundwater contamination 
+		Values: Yes/No/Unknown
+
+Injuries to Fish and Wildlife
+	Other dead animals present 
+		Values: 'on' or no value
+	Fish killed by natural causes 
+		Values: 'on' or no value
+	Number dead in natural kill 
+		Values: int
+	Species specified
+		Values: (varied)
+	State of Decay 
+		Values: Fresh Dead/Slight Decay/Heavy Decay
+	Live Fish Present 
+		Values: 'on' or no value
+	Injuries Observed 
+		Values: 'on' or no value
+	Injuries Specified
+		Values: (varied)
+	Live Fish Behaviors
+		Values: (varied)
+	Extent of Damage 
+		Values: int
+	Damage Units 
+		Values: miles/acres/feet
+	Duration of Effects 
+		Values: int
+
+Environmental Conditions
+----Note: the following fields are regarding descriptions during the investigation---- 
+	Precipitation
+		Values: Yes/No	
+	Air Temperature
+		Values: int
+	Air Temperature Units
+		Values: C/F
+	Cloud Cover
+		Values: Clear/Partly Cloudy/Overcast
+	Water Flow
+		Values: None/Low/Medium/High
+	Turbidity
+		Values: Clear/Hazy/Opaque
+	Color
+		Values: string
+	Visible Discharge?
+		Values: Yes/No
+	Surface Scum?
+		Values: Yes/No
+	Odor
+		Values: string
+----The fields above are repeated regarding 24 hours before the investigation----
+----There is one extra field for the 24 hour before period:
+	Precipitation Amount
+		Values: int
+
+Investigative Time
+---Multiple people can be specified. Each field has a suffixed number to 
+---denote which involved person has the field. 
+	First Name
+		Values: string
+	Last Name
+		Values: string
+	Division
+		Values: string
+	Phone
+		Values: string, unformatted
+	Hours
+		Values: int
+	Date
+		Values: 'XX/XX/XXXX'
+	Field Investigator
+		Values: 'on' or no value
+
+Water Sample Stations
+---Multiple water stations can be specified. Each field has a suffixed number to 
+---denote which station has the field. 
+	Station Description
+		Values: string
+	County
+		Values: string
+	DO (mg/L)
+		Values: varied number
+	Temperature
+		Values: int
+	pH
+		Values: varied number
+	NH3 (mg/L)
+		Values: int
+	Comments
+		Values: string
+	Date 
+		Values: 'XX/XX/XXXX'
+	Time 
+		Values: 'XX:XX[ap]m'
+
+Comments
+	Regarding the Investigation
+		Values: string
+	Corrective Actions Required
+		Values: string
 
 
 ------------Database---------------
