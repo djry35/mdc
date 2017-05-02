@@ -1,0 +1,33 @@
+api/autofill
+	/reporter
+	/observer
+	/contributor
+	/investigator
+	/county
+	/city
+	/waterbody
+	/agOther
+	/indOther
+	/munOther
+	/transOther
+	/species
+	/behaviors
+	/injuries
+	/sampleStation
+api/formSubmission
+	URL parameters: none
+	Request: POST
+	Body data: JSON 
+api/formRetrieval
+	URL parameters: 
+		ID: number referring to the form requested by the admin or user.
+	Request: GET
+api/adminQuery
+	URL parameters: none 
+	Request: POST
+	Body data: string
+	
+api/formUpdate
+	/approve
+	/edit
+	
