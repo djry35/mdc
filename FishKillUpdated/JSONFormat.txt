@@ -1,4 +1,4 @@
-Below describes the format of the web form converted to JSON, followed by examples. 
+Below describes the format of the web form converted to JSON. 
 
 Used to standardize communication between the front end and the web API. 
 
@@ -141,26 +141,15 @@ durationEffects
 	Denotes number of days the damage has been taking place. 
 	
 precipitationDuring
-	A "Yes"/"No" value to denote precipitation present during investigation. If not specified in the form, the field will not show up in the JSON.
 airTempDuring
-	The temperature observed during investigation. 
 unitsTempDuring
-	Goes with airTempDuring, denotes F or C.
 cloudCoverDuring
-	The observed cloud cover. Values are "clear", "partlyCloudy" and "overcast". 
 waterFlowDuring
-	WYSIWYG. Values are "none", "low", "medium" and "high"
 waterTurbidityDuring
-	WYSIWYG. Values are "clear", "hazy" and "opaque"
 waterDescColorDuring
-	Describes the color of the water. Expected is a somewhat short description. 
 dischargeDuring
-	Denotes visible discharge observed during investigation. Identical behavior to precipitationDuring.
 scumDuring
-	Denotes surface scum observed during investigation. Identical behavior to precipitationDuring
 waterDescOdorDuring
-	Describes any odor in the area. Expected is only a few words.  
-(The following values are identical to the above. They simply are in reference to 24 hours before the investigation.)
 precipitationAfter
 precAmtSpec
 airTempAfter
@@ -175,198 +164,22 @@ waterDescOdorAfter
 
 (The following are repeated for multiple investigators. See notified people.)
 personInvestigatedFName
-	The first name of the person who did an investigation. 
 personInvestigatedLName
-	The last name of the investigator.
 divisionInvestigated
-	The division of the investigator at time of investigation.
 phoneInvestigated
-	The phone number of the investigator.
 hoursInvestigated
-	The number of hours the person conducted an investigation.
 dateInvestigated
-	The date the person investigated the area.
 fieldInvestigator
-	A checkbox denoting if the person was a field investigator. 
 
 (The following are repeated for multiple sample stations. See notified people.)
 waterSampleStationID
-	The ID of the particular waterStation. Used only for autocompletion purposes. Not currently used on the front end. 
 waterSampleStationDescription
-	Describes the sample station, including location, setup, etc. Used generally to identify unique sample stations, although the stations are not kept unique in the database due to differing descriptions. 
 waterStationCounty
-	The county the station is located in.
 DO
-	The DO reading observed at the station.
 pH
-	The pH level observed at the station.
 stationComments
-	Any other observations done at the station. 
 dateRecorded
-	The date the above observations were done.
 stationTimeRecorded
-	The time the above observations were done. 
 
 investigationComments
-	General investigation comments, descriptions, etc. that weren't covered above. 
 investigationActions
-	General actions that could or need to be taken in response to this investigation. 
-
-
-----------Example JSONS---------------
-
-Empty form JSON:
-[
-	{"name":"rFirstName","value":""},
-	{"name":"rLastName","value":""},
-	{"name":"rTitle","value":""},
-	{"name":"rAddress","value":""},
-	{"name":"rCity","value":""},
-	{"name":"rZipCode","value":""},
-	{"name":"rPhone","value":""},
-	{"name":"investigationDate","value":""},
-	{"name":"investigationTime","value":""},
-	{"name":"nearestTown","value":""},
-	{"name":"county","value":""},
-	{"name":"coordCategory","value":""},
-	{"name":"startingUTM_X","value":""},
-	{"name":"startingUTM_Y","value":""},
-	{"name":"endingUTM_X","value":""},
-	{"name":"endingUTM_Y","value":""},
-	{"name":"legalTN","value":""},
-	{"name":"legalRW","value":""},
-	{"name":"legalS","value":""},
-	{"name":"waterType","value":""},
-	{"name":"waterbodyName","value":""},
-	{"name":"agencyNotified1","value":"DNR-EER"},
-	{"name":"personNotifiedFName1","value":""},
-	{"name":"personNotified1LName1","value":""},
-	{"name":"phoneNotified1","value":""},
-	{"name":"emailNotified1","value":""},
-	{"name":"dateNotified1","value":""},
-	{"name":"timeNotified1","value":""},
-	{"name":"agOtherSpec","value":""},
-	{"name":"indOtherSpec","value":""},
-	{"name":"munOtherSpec","value":""},
-	{"name":"transOtherSpec","value":""},
-	{"name":"causePol","value":""},
-	{"name":"sourcePol","value":""},
-	{"name":"quantityPol","value":""},
-	{"name":"eventDatePol","value":""},
-	{"name":"naturalDeadCt","value":""},
-	{"name":"otherSpeciesDeadSpec","value":""},
-	{"name":"stateOfDecay","value":""},
-	{"name":"injuryOtherSpec","value":""},
-	{"name":"otherBehaviorSpec","value":""},
-	{"name":"dmgEval","value":""},
-	{"name":"dmgUnits","value":""},
-	{"name":"durationEffects","value":""},
-	{"name":"airTempDuring","value":""},
-	{"name":"unitsTempDuring","value":""},
-	{"name":"cloudCoverDuring","value":""},
-	{"name":"waterFlowDuring","value":""},
-	{"name":"waterTurbidityDuring","value":""},
-	{"name":"waterDescColorDuring","value":""},
-	{"name":"waterDescOdorDuring","value":""},
-	{"name":"precAmtSpec","value":""},
-	{"name":"airTempAfter","value":""},
-	{"name":"unitsTempAfter","value":""},
-	{"name":"cloudCoverAfter","value":""},
-	{"name":"waterFlowAfter","value":""},
-	{"name":"waterTurbidityAfter","value":""},
-	{"name":"waterDescColorAfter","value":""},
-	{"name":"WaterDescOdorAfter","value":""},
-	{"name":"investigationComments","value":""},
-	{"name":"investigationActions","value":""}
-]
-
-Partially filled in form:
-	[{"name":"rFirstName","value":"Bob"},
-	{"name":"rLastName","value":"Joe"},
-	{"name":"rTitle","value":""},
-	{"name":"rAddress","value":""},
-	{"name":"rCity","value":""},
-	{"name":"rZipCode","value":""},
-	{"name":"rPhone","value":""},
-	{"name":"investigationDate","value":""},
-	{"name":"investigationTime","value":""},
-	{"name":"nearestTown","value":""},
-	{"name":"county","value":""},
-	{"name":"coordCategory","value":""},
-	{"name":"startingUTM_X","value":""},
-	{"name":"startingUTM_Y","value":""},
-	{"name":"endingUTM_X","value":""},
-	{"name":"endingUTM_Y","value":""},
-	{"name":"legalTN","value":""},
-	{"name":"legalRW","value":""},
-	{"name":"legalS","value":""},
-	{"name":"waterType","value":"wetland"},
-	{"name":"waterbodyName","value":"It's A Trap!"},
-	{"name":"agencyNotified1","value":"DNR-EER"},
-	{"name":"personNotifiedFName1","value":""},
-	{"name":"personNotified1LName1","value":""},
-	{"name":"phoneNotified1","value":""},
-	{"name":"emailNotified1","value":""},
-	{"name":"dateNotified1","value":""},
-	{"name":"timeNotified1","value":""},
-	{"name":"pollutionCategory","value":"agOps"},
-	{"name":"agOpsSubcategory","value":"pesticide"},
-	{"name":"agOpsSubcategory","value":"manure"},
-	{"name":"agOtherSpec","value":""},
-	{"name":"indOtherSpec","value":""},
-	{"name":"pollutionCategory","value":"munOps"},
-	{"name":"munOpsSubcategory","value":"other"},
-	{"name":"munOtherSpec","value":""},
-	{"name":"transOtherSpec","value":""},
-	{"name":"pollutionCategory","value":"natural"},
-	{"name":"causePol","value":""},
-	{"name":"sourcePol","value":""},
-	{"name":"quantityPol","value":""},
-	{"name":"eventDatePol","value":""},
-	{"name":"moWatersContamination","value":"No"},
-	{"name":"groundwaterContamination","value":"Yes"},
-	{"name":"naturalDeadCt","value":""},
-	{"name":"otherSpeciesDeadSpec","value":""},
-	{"name":"stateOfDecay","value":""},
-	{"name":"injuryOtherSpec","value":""},
-	{"name":"otherBehaviorSpec","value":""},
-	{"name":"dmgEval","value":""},
-	{"name":"dmgUnits","value":""},
-	{"name":"durationEffects","value":""},
-	{"name":"precipitationDuring","value":"Yes"},
-	{"name":"airTempDuring","value":""},
-	{"name":"unitsTempDuring","value":""},
-	{"name":"cloudCoverDuring","value":""},
-	{"name":"waterFlowDuring","value":""},
-	{"name":"waterTurbidityDuring","value":""},
-	{"name":"waterDescColorDuring","value":""},
-	{"name":"dischargeDuring","value":"Yes"},
-	{"name":"scumDuring","value":"Yes"},
-	{"name":"waterDescOdorDuring","value":""},
-	{"name":"precipitationAfter","value":"No"},
-	{"name":"precAmtSpec","value":""},
-	{"name":"airTempAfter","value":""},
-	{"name":"unitsTempAfter","value":""},
-	{"name":"cloudCoverAfter","value":""},
-	{"name":"waterFlowAfter","value":""},
-	{"name":"waterTurbidityAfter","value":""},
-	{"name":"waterDescColorAfter","value":""},
-	{"name":"dischargeAfter","value":"No"},
-	{"name":"scumAfter","value":"No"},
-	{"name":"WaterDescOdorAfter","value":""},
-	{"name":"personInvestigatedFName1","value":"Joe"},
-	{"name":"personInvestigatedLName1","value":"Bob"},
-	{"name":"divisionInvestigated1","value":"Top Secret"},
-	{"name":"phoneInvestigated1","value":"573-867-5309"},
-	{"name":"hoursInvestigated1","value":"1"},
-	{"name":"dateInvestigated1","value":"05/16/2017"},
-	{"name":"personInvestigatedFName2","value":"Joe"},
-	{"name":"personInvestigatedLName2","value":"Shmoe"},
-	{"name":"divisionInvestigated2","value":"CIA"},
-	{"name":"phoneInvestigated2","value":"1111111111"},
-	{"name":"hoursInvestigated2","value":"33"},
-	{"name":"dateInvestigated2","value":"05/20/2017"},
-	{"name":"fieldInvestigator2","value":"on"},
-	{"name":"investigationComments","value":"Nope"},
-	{"name":"investigationActions","value":"Nuh uh"}
-]
