@@ -1,0 +1,185 @@
+Below describes the format of the web form converted to JSON. 
+
+Used to standardize communication between the front end and the web API. 
+
+The JSON consists of a basic key-field setup, as shown below:
+
+[
+	{ "name":<field name>, "value":<field value> },
+	{ "name":<field name>, "value":<field value> },
+	...
+]
+
+The field names are described below (NOTE: NOT ALL WILL GUARANTEED TO BE PRESENT. SEE FIELD DETAILS):
+
+rFirstName
+	The reporter's first name. Reporter is referring to the person accessing the site and filling out the form.
+rLastName
+	The reporter's last name.
+rTitle
+	The reporter's title at time of form entry.
+rAddress
+	The reporter's address at time of form entry.
+rCity
+	The city the reporter is living in. 
+rZipCode
+	The zip code the reporter is living in.
+rPhone
+	The reporter's current phone number. 
+
+investigationDate
+	The date the investigation took place.
+investigationTime
+	The time the investigation took place.
+nearestTown
+	The nearest town relative to the investigation site.
+county
+	The county the investigation took place in.
+coordCategory
+	Denotes the method of describing location specifics. See the UTM fields below. This value will either be "point" or "line"; if "point", use the starting values below. If "line", use starting and ending. 
+startingUTM_X
+	The starting point's X value to mark a specific location. Used in conjunction with the coordCategory and the below UTM values.
+startingUTM_Y
+	The starting point's Y value to mark a specific location. Used in conjunction with the coordCategory and the other UTM values. This combined with the starting X value marks a specific location where the investigation took place.
+	startingUTM_X and startingUTM_Y will always be used if coordCategory is set. 
+endingUTM_X
+	The ending point's X value in marking a specific location. Used in conjunction with the other UTM values.
+endingUTM_Y
+	The ending point's Y value in marking a specific location. This combined with the ending X value helps mark a specific location for the investigation: (startX, startY) and (endX, endY) make a line to denote the coverage of the investigation. 
+	NOTE: endingUTM_X and endingUTM_Y are not used if coordCategory is "point".  
+legalTN
+	The township value in TN/RW/S. Used for more identification of the investigation location. This is not required, although if specified, usually the RW and S values will be specified also. 
+legalRW
+	The range value in TN/RW/S. See legalTN. 
+legalS
+	The section value in TN/RW/S. See legalTN.
+waterType
+	The type of waterbody involved. Values are "lake", "pond", "stream", "wetland", "backwater" or "none".
+waterbodyName
+	The name of the waterbody. If waterType is "none", this is not specified.
+
+(The following are repeated for multiple people notified. Each field will be suffixed by a number to denote the different people who are notified. Fields with the same suffixed number are referring to the same person.)
+agencyNotified
+	The agency the person belongs to at time of notification. 
+personNotifiedFName
+	The first name of the person notified. An individual might be omitted from the form, and instead only an agency is specified. These fields will still be present in the JSON, but blank. 
+personNotifiedLName
+	The last name of the person notified.
+phoneNotified
+	The phone number of the person or agency notified.
+emailNotified
+	The email of the person notified.
+dateNotified
+	The date the person/agency was notified.
+timeNotified
+	The time the person/agency was notified.
+
+pollutionCategory
+	The category the pollution source falls under. If multiple categories are specified, the pollutionCategory key will be used multiple times with different fields:
+		{ "name":"pollutionCategory", "value": "agOps" },
+		{ "name":"pollutionCategory", "value": "indOps" },
+	etc. The possible values for pollutionCategory are "agOps", "indOps", "munOps", "transOps", "natural", "other", "unknown", and "none". This also does not have to be specified at all. If this is not specified, none of the related fields below or this field will be present.  
+agOpsSubcategory
+	If "agOps" is specified for pollutionCategory, a value for this field is possible, although not required. Similar to pollutionCategory, multiple subcategories can be specified which would put same key, multiple fields into the JSON the same way pollutionCategory will behave with multiple fields.
+	The values for this field are "fertilizer", "pesticide", "manure" and other". 
+indOpsSubcategory
+	Identical behavior to agOpsSubcategory. Values for this field are "chemical", "petroleum", "metals" and other". 
+munOpsSubcategory
+	Identical behavior to agOpsSubcategory. Values for this field are "power", "refuse", "sewage" and other". 
+transOpsSubcategory
+	Identical behavior to agOpsSubcategory. Values for this field are "pipeline", "truck", "rail" and other". 
+agOtherSpec
+	If "other" is specified for agOpsSubcategory, this field is likely to be filled in. This field is always present in the JSON, but only has to be checked if "other" has been specified, since it will be guaranteed blank at all other times. 
+indOtherSpec
+	Identical behavior to agOtherSpec.
+munOtherSpec
+	Identical behavior to agOtherSpec.
+transOtherSpec
+	Identical behavior to agOtherSpec.
+
+causePol
+	The specific name of the pollutant to trigger the fish killing. Always present in the JSON, but could be ommited from the form. 
+sourcePol
+	The source of the above pollutant. Identical behavior to causePol.
+quantityPol
+	The amount of pollutant observed. The field could have units included with the value in the string; they are still combined into a string in the database, so no parsing needed. Identical behavior to causePol.
+eventDatePol
+	The date the pollutant started affecting the area. Identical behavior to causePol. 
+moWatersContamination
+	A "Yes"/"No"/"Unknown" value to denote missouri waters being contaminated. If not specified in the form, the field will not show up in the JSON.
+groundwaterContamination
+	Identical behavior to moWatersContamination. Value to denote groundwater being contaminated. 
+otherDead
+	Denotes if other animals were found dead. If specified, the value will be "on". Otherwise, it will not be in the JSON.
+fishNaturallyDead
+	Denotes if fish died of natural causes. Identical behavior to otherDead.
+naturalDeadCt
+	The estimated number of fish dead from natural causes. This will always be present in the JSON, but the value only has to be checked if fishNaturallyDead is specified.
+speciesCategory
+	Identical behavior to pollutionCategory. Values will vary as the form is edited at a later date. 
+otherSpeciesDeadSpec
+	Similar to the above OtherSpec fields, this will always be present in the JSON, but only has to be checked if speciesCategory has a value of "other". 
+stateOfDecay
+	WYSIWYG. Values possible are "Fresh", "Slight", and "Heavy". 
+liveFishPresent
+	Identical behavior to otherDead. Denotes if live fish are present at the site. 
+injuriesObserved
+	Identical behavior to otherDead. Denotes if injuries were observed or not. Specific injuries are below. 
+injuryCategory
+	Identical behavior to speciesCategory.
+injuryOtherSpec
+	Identical behavior to otherSpeciesDeadSpec.
+behaviorCategory
+	Identical behavior to speciesCategory.
+otherBehaviorSpec
+	Identical behavior to otherSpeciesDeadSpec.
+dmgEval
+	Denotes the numerical value of the damage observed. Always present in the JSON, but might have no value. 
+dmgUnits
+	The units associated with dmgEval. Values are "miles", "acres" and "feet". 
+durationEffects
+	Denotes number of days the damage has been taking place. 
+	
+precipitationDuring
+airTempDuring
+unitsTempDuring
+cloudCoverDuring
+waterFlowDuring
+waterTurbidityDuring
+waterDescColorDuring
+dischargeDuring
+scumDuring
+waterDescOdorDuring
+precipitationAfter
+precAmtSpec
+airTempAfter
+unitsTempAfter
+cloudCoverAfter
+waterFlowAfter
+waterTurbidityAfter
+waterDescColorAfter
+dischargeAfter
+scumAfter
+waterDescOdorAfter
+
+(The following are repeated for multiple investigators. See notified people.)
+personInvestigatedFName
+personInvestigatedLName
+divisionInvestigated
+phoneInvestigated
+hoursInvestigated
+dateInvestigated
+fieldInvestigator
+
+(The following are repeated for multiple sample stations. See notified people.)
+waterSampleStationID
+waterSampleStationDescription
+waterStationCounty
+DO
+pH
+stationComments
+dateRecorded
+stationTimeRecorded
+
+investigationComments
+investigationActions

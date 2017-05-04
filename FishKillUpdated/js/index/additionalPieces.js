@@ -91,7 +91,8 @@ $("#addWaterSampleStations").click(
 			num++;
 		}
 
-		var stationDescription = "<div class='inputWrapper'><label for='waterSampleStationDescription" + num + "' class='txtFieldHeader'>Station Description</label><textarea name='waterSampleStationDescription" + num + "' class='txtFieldInput' id='waterSampleStationDescription" + num + "' style='width: 20%'></textarea></div>",
+		var ID = "<div class='inputWrapper'><label for='waterSampleStationID" + num + "' class='txtFieldHeader'>Station ID</label><input name='waterSampleStationID" + num + "' class='txtFieldInput' id='waterSampleStationID" + num + "' style='width: 90px'></div>",
+			stationDescription = "<div class='inputWrapper'><label for='waterSampleStationDescription" + num + "' class='txtFieldHeader'>Station Description</label><textarea name='waterSampleStationDescription" + num + "' class='txtFieldInput' id='waterSampleStationDescription" + num + "' style='width: 20%'></textarea></div>",
 			county = "<div class='inputWrapper'><label for='waterStationCounty" + num + "' class='txtFieldHeader'>County</label><input name='waterStationCounty" + num + "' class='txtFieldInput' id='waterStationCounty" + num + "'></div>",
 			coordinates = "<div class='inputWrapper'><label for='dateRecorded" + num + "' class='txtFieldHeader'>Coordinates</label><input class='txtFieldInput dateInput'></div>",
 			DO = "<div class='inputWrapper'><label for='DO" + num + "' class='txtFieldHeader'>DO (mg/L)</label><input name='DO" + num + "' class='txtFieldInput' id='DO" + num + "' style='width: 90px'></div>",
@@ -106,7 +107,7 @@ $("#addWaterSampleStations").click(
 		$("#waterSampleStationsContainer").append(
 			"<div class='sampleStation' id='station" + num 
 			+ "' style='height: 700px'><label class='sampleStationHeader'>Station Information</label><div>" 
-			+ button + "</div>" + stationDescription + county + coordinates 
+			+ button + "</div>" + ID + stationDescription + county + coordinates 
 			+ DO + temp + pH + NH3 + comments + date + time + "</div>");
 
 		$("#dateRecorded" + num).datepicker({ changeMonth: true, changeYear: true });

@@ -1,4 +1,4 @@
-$( "#counties").autocomplete({
+$( "#county").autocomplete({
     source:["Adair", "Andrew", "Atchison", "Audrain", 
 	    "Barry", "Barton", "Bates", "Benton", "Bollinger", 
 	    "Boone", "Buchanan", "Butler", "Caldwell", "Callaway", 

@@ -125,8 +125,8 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                                 <input type="text" name="nearestTown" id="nearestTown" class="txtFieldInput form-control">
                             </div>
                             <div class="inputWrapper">
-                                <label for="counties" class="txtFieldHeader">County:</label>
-                                <input name="counties" id="counties" class="txtFieldInput form-control">
+                                <label for="county" class="txtFieldHeader">County:</label>
+                                <input name="county" id="county" class="txtFieldInput form-control">
                             </div>
                             <div class="inputWrapper">
                                 <label class="txtFieldHeader" for="coordCategory">Location Detail:</label>
@@ -143,23 +143,23 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                             <div id="lineStart" style="height: 120px" hidden>
                                 <label class="InjuriesFldsetHeader">Coordinate Point One</label><br>
                                 <div class="inputWrapper">
-                                    <label for="StartingUTM_X" class="txtFieldHeader">Xcoord</label>
-                                    <input name="StartingUTM_X" type="number" class="txtFieldInput form-control" id="StartingUTM_X">
+                                    <label for="startingUTM_X" class="txtFieldHeader">Xcoord</label>
+                                    <input name="startingUTM_X" type="number" class="txtFieldInput form-control" id="startingUTM_X">
                                 </div>
                                 <div class="inputWrapper">
-                                    <label for="StartingUTM_Y" class="txtFieldHeader">Ycoord</label>
-                                    <input name="StartingUTM_Y" type="number" class="txtFieldInput form-control" id="StartingUTM_Y">
+                                    <label for="startingUTM_Y" class="txtFieldHeader">Ycoord</label>
+                                    <input name="startingUTM_Y" type="number" class="txtFieldInput form-control" id="startingUTM_Y">
                                 </div>
                             </div>
                             <div id="lineEnd" hidden>
                                 <label class="InjuriesFldsetHeader">Coordinate Point Two</label><br>
                                 <div class="inputWrapper">
-                                    <label for="EndingUTM_X" class="txtFieldHeader">Xcoord</label>
-                                    <input name="EndingUTM_X" type="number" class="txtFieldInput form-control" id="EndingUTM_X">
+                                    <label for="endingUTM_X" class="txtFieldHeader">Xcoord</label>
+                                    <input name="endingUTM_X" type="number" class="txtFieldInput form-control" id="endingUTM_X">
                                 </div>
                                 <div class="inputWrapper">
-                                    <label for="EndingUTM_Y" class="txtFieldHeader">Ycoord</label>
-                                    <input name="EndingUTM_Y" type="number" class="txtFieldInput form-control" id="EndingUTM_Y">
+                                    <label for="endingUTM_Y" class="txtFieldHeader">Ycoord</label>
+                                    <input name="endingUTM_Y" type="number" class="txtFieldInput form-control" id="endingUTM_Y">
                                 </div>
                             </div>
 
@@ -247,13 +247,13 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                     <input type="checkbox" name="pollutionCategory" id="agOps" value="agOps" class="pollutionCat">
                     <div id="agOpsOptions" hidden>
                         <label for="fertilizer">Fertilizer</label> 
-                        <input name="agOpsSubcategory" type="checkbox" value="Fertilizer" class="agPollution" id="fertilizer">
+                        <input name="agOpsSubcategory" type="checkbox" value="fertilizer" class="agPollution" id="fertilizer">
                         <label for="pesticide">Pesticide</label> 
-                        <input name="agOpsSubcategory" type="checkbox" class="agPollution" id="pesticide">
+                        <input name="agOpsSubcategory" type="checkbox" value="pesticide" class="agPollution" id="pesticide">
                         <label for="manure">Manure</label>  
-                        <input name="agOpsSubcategory" type="checkbox" value="Manure" class="agPollution" id="manure">
+                        <input name="agOpsSubcategory" type="checkbox" value="manure" class="agPollution" id="manure">
                         <label for="agOtherPol">Other</label>  
-                        <input name="agOpsSubcategory" type="checkbox" value="Other" class="agPollution otherSelection" id="agOtherPol">
+                        <input name="agOpsSubcategory" type="checkbox" value="other" class="agPollution otherSelection" id="agOtherPol">
                         <div class="otherSpecs" id="agOtherDesc" hidden>
                             (optional) Specify: <input type="text" name="agOtherSpec" id="agOtherSpec">
                         </div>
@@ -264,13 +264,13 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                     <input type="checkbox" name="pollutionCategory" id="indOps" value="indOps" class="pollutionCat">
                     <div id="indOpsOptions" hidden>
                         <label for="chemical">Chemical</label>
-                        <input name="indOpsSubcategory" type="checkbox" value="Chemical" class="indPollution" id="chemical">
+                        <input name="indOpsSubcategory" type="checkbox" value="chemical" class="indPollution" id="chemical">
                         <label for="petroleum">Petroleum</label>
-                        <input name="indOpsSubcategory" type="checkbox" value="Petroleum" class="indPollution" id="petroleum">
+                        <input name="indOpsSubcategory" type="checkbox" value="petroleum" class="indPollution" id="petroleum">
                         <label for="metals">Metals</label>
-                        <input name="indOpsSubcategory" type="checkbox" value="Metals" class="indPollution" id="metals">
+                        <input name="indOpsSubcategory" type="checkbox" value="metals" class="indPollution" id="metals">
                         <label for="indOtherPol">Other</label>
-                        <input name="indOpsSubcategory" type="checkbox" value="Other" class="indPollution otherSelection" id="indOtherPol">
+                        <input name="indOpsSubcategory" type="checkbox" value="other" class="indPollution otherSelection" id="indOtherPol">
                         <div class="otherSpecs" id="indOtherDesc" hidden>
                             (optional) Specify: <input name="indOtherSpec" type="text" id="indOtherSpec">
                         </div>
@@ -281,13 +281,13 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                     <input name="pollutionCategory" type="checkbox" id="munOps" value="munOps" class="pollutionCat">
                     <div id="munOpsOptions" hidden>
                         <label for="power">Power</label>
-                        <input name="munOpsSubcategory" type="checkbox" value="Power" class="munPollution" id="power">
+                        <input name="munOpsSubcategory" type="checkbox" value="power" class="munPollution" id="power">
                         <label for="refuse">Refuse</label>
-                        <input name="munOpsSubcategory" type="checkbox" value="Refuse" class="munPollution" id="refuse">
+                        <input name="munOpsSubcategory" type="checkbox" value="refuse" class="munPollution" id="refuse">
                         <label for="sewage">Sewage</label>
-                        <input name="munOpsSubcategory" type="checkbox" value="Sewage" class="munPollution" id="sewage">
+                        <input name="munOpsSubcategory" type="checkbox" value="sewage" class="munPollution" id="sewage">
                         <label for="munOtherPol">Other</label>
-                        <input name="munOpsSubcategory" type="checkbox" value="Other" class="munPollution otherSelection" id="munOtherPol">
+                        <input name="munOpsSubcategory" type="checkbox" value="other" class="munPollution otherSelection" id="munOtherPol">
                         <div class="otherSpecs" id="munOtherDesc" hidden>
                             (optional) Specify: <input type="text" name="munOtherSpec" id="munOtherSpec">
                         </div>
@@ -298,13 +298,13 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                     <input name="pollutionCategory" type="checkbox" id="transOps" value="transOps" class="pollutionCat">
                     <div id="transOpsOptions" hidden>
                         <label for="pipeline">Pipeline</label>
-                        <input name="transOpsSubcategory" type="checkbox" value="Pipeline" class="transPollution" id="pipeline">
+                        <input name="transOpsSubcategory" type="checkbox" value="pipeline" class="transPollution" id="pipeline">
                         <label for="truck">Truck</label>
-                        <input name="transOpsSubcategory" type="checkbox" value="Truck" class="transPollution" id="truck">
+                        <input name="transOpsSubcategory" type="checkbox" value="truck" class="transPollution" id="truck">
                         <label for="rail">Rail</label>
-                        <input name="transOpsSubcategory" type="checkbox" value="Rail" class="transPollution" id="rail">
+                        <input name="transOpsSubcategory" type="checkbox" value="rail" class="transPollution" id="rail">
                         <label for="transOtherPol">Other</label>
-                        <input name="transOpsSubcategory" type="checkbox" value="Other" class="transPollution otherSelection" id="transOtherPol">
+                        <input name="transOpsSubcategory" type="checkbox" value="other" class="transPollution otherSelection" id="transOtherPol">
                         <div class="otherSpecs" id="transOtherDesc" hidden>
                             (optional) Specify: <input name="transOtherSpec" type="text" id="transOtherSpec">
                         </div>
@@ -312,13 +312,13 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                 </div>
                 <div>
                     <label for="naturalPol">Natural</label>
-                    <input name="pollutionCategory" type="checkbox" value="Natural" class="pollutionCat" id="naturalPol">
+                    <input name="pollutionCategory" type="checkbox" value="natural" class="pollutionCat" id="naturalPol">
                     <label for="otherPol">Other</label>
-                    <input name="pollutionCategory" type="checkbox" value="Other" class="pollutionCat otherPollution otherSelection" id="otherPol">
+                    <input name="pollutionCategory" type="checkbox" value="other" class="pollutionCat otherPollution otherSelection" id="otherPol">
                     <label for="unknownPol">Unknown</label>
-                    <input name="pollutionCategory" type="checkbox" value="Unknown" class="pollutionCat" id="unknownPol">
+                    <input name="pollutionCategory" type="checkbox" value="unknown" class="pollutionCat" id="unknownPol">
                     <label for="nonePol">None</label>
-                    <input name="pollutionCategory" type="checkbox" value="None" class="pollutionCat" id="nonePol">
+                    <input name="pollutionCategory" type="checkbox" value="none" class="pollutionCat" id="nonePol">
                 </div>
             </div>
             <div style="height: 190px; margin-top: 40px">
@@ -365,7 +365,7 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                 <input name="otherDead" type="checkbox" id="otherDead">
                 <br><br>
                 <label for="fishDead">Fish were killed by natural causes</label> 
-                <input name="fishDead" type="checkbox" id="fishDead">
+                <input name="fishDead" type="checkbox" id="fishNaturallyDead">
             </div>
             <div id="naturalKillSpec" hidden>
                 <label for="naturalDeadCt">Number dead in natural kill</label> 
@@ -471,7 +471,7 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                 <label for="behaviorOther">Other</label> 
                 <input name="behaviorCategory" type="checkbox" value="Other" class="behavior" id="behaviorOther">
                 <div class="otherSpecs" id="behaviorsOther" hidden>
-                    Please specify other behaviors: <input name="OtherBehaviorSpec" type="text" id="OtherBehaviorSpec">
+                    Please specify other behaviors: <input name="otherBehaviorSpec" type="text" id="otherBehaviorSpec">
                 </div>
             </div>
 
@@ -490,8 +490,8 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
                 </div>
                 <br><br>
                 <div class="inputWrapper" id="durationEffectsWrapper">
-                <label for="Duration">Duration of Effects:</label> 
-                <input name="DurationEffects" type="number" id="DurationEffects" style="width: 51px"> days
+                <label for="durationEffects">Duration of Effects:</label> 
+                <input name="durationEffects" type="number" id="durationEffects" style="width: 51px"> days
                 </div>
             </div>
         </div>
@@ -664,12 +664,12 @@ Click the tabs to expand each section. Fill out as much as you can. <br>
         <h3 id="commentsTab">Comments</h3>
         <div id="commentsExpand">
             <div style="height: 255px">
-              <label for="comments">Type any comments or narratives regarding the investigation:</label><br>
-              <textarea name="comments" id="comments" cols="100"></textarea>
+              <label for="investigationComments">Type any comments or narratives regarding the investigation:</label><br>
+              <textarea name="investigationComments" id="investigationComments" cols="100"></textarea>
             </div>
             <div style="height: 255px">
-              <label for="actions">Describe any corrective action needed:</label><br>
-              <textarea name="actions" id="actions" cols="100"></textarea>
+              <label for="investigationActions">Describe any corrective action needed:</label><br>
+              <textarea name="investigationActions" id="investigationActions" cols="100"></textarea>
             </div>
         </div>
     </div>

@@ -6,32 +6,32 @@ $("#coordCategory").selectmenu({
 		if(selected == "line") 
 		{ 
 			$("#lineStart").removeAttr("hidden");
-			$("#StartingUTM_X").attr("required", true);
-			$("#StartingUTM_Y").attr("required", true);
+			$("#startingUTM_X").attr("required", true);
+			$("#startingUTM_Y").attr("required", true);
 			$("#lineEnd").removeAttr("hidden");
-			$("#EndingUTM_X").attr("required", true);
-			$("#EndingUTM_Y").attr("required", true);
+			$("#endingUTM_X").attr("required", true);
+			$("#endingUTM_Y").attr("required", true);
 			$("#map").attr("hidden", true);
 		}
 		else if(selected == "point")
 		{
 			$("#lineStart").removeAttr("hidden");
-			$("#StartingUTM_X").attr("required", true);
-			$("#StartingUTM_Y").attr("required", true);
+			$("#startingUTM_X").attr("required", true);
+			$("#startingUTM_Y").attr("required", true);
 			$("#map").attr("hidden", true);
 			$("#lineEnd").attr("hidden", true);
-			$("#EndingUTM_X").attr("required", false);
-			$("#EndingUTM_Y").attr("required", false);
+			$("#endingUTM_X").attr("required", false);
+			$("#endingUTM_Y").attr("required", false);
 		}
 		else
 		{
 			$("#map").attr("hidden", true);
 			$("#lineStart").attr("hidden", true);
-			$("#StartingUTM_X").attr("required", false);
-			$("#StartingUTM_Y").attr("required", false);
+			$("#startingUTM_X").attr("required", false);
+			$("#startingUTM_Y").attr("required", false);
 			$("#lineEnd").attr("hidden", true);
-			$("#EndingUTM_X").attr("required", false);
-			$("#EndingUTM_Y").attr("required", false);
+			$("#endingUTM_X").attr("required", false);
+			$("#endingUTM_Y").attr("required", false);
 		}
 	}
 });
