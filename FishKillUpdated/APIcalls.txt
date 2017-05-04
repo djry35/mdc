@@ -1,19 +1,76 @@
 api/autofill
 	/reporter
+		URL parameters:
+			FName: the person's first name
+			LName: the person's last name
+		Request: GET
+		Return: JSON
+		Does a query against the first/last name to get the following information and return it:
+			Current person's title
+			Current person's address
+			Current person's city
+			Current person's zip code
+			Current person's phone number
 	/observer
+		URL parameters:
+			FName: the person's first name
+			LName: the person's last name
+		Request: GET
+		Return: JSON
+		Scheduled for later implementation.
 	/contributor
+		URL parameters:
+			FName: the person's first name
+			LName: the person's last name
+		Request: GET
+		Return: JSON
 	/investigator
+		URL parameters:
+			FName: the person's first name
+			LName: the person's last name
+		Request: GET
+		Return: JSON
 	/county
+		URL parameters: none
+		Request: GET
+		Return: JSON
+		Returns all the counties archived in the database.
 	/city
+		URL parameters: none
+		Request: GET
+		Return: JSON
+		Returns all the cities archived in the database.
 	/waterbody
-	/agOther
-	/indOther
-	/munOther
-	/transOther
+		URL parameters: none
+		Request: GET
+		Return: JSON
+		Returns all the waterbody names archived in the database.
+	/pollutionSubcategories
+		URL parameters: 
+			Category: The pollution category to fetch data on. 
+		Request: GET
+		Return: CSV
+		Returns all the subcategories archived under the given parent pollution category. 
 	/species
+		URL parameters: none
+		Request: GET
+		Return: CSV
+		Returns all the species archived in the database. 
 	/behaviors
+		URL parameters: none
+		Request: GET
+		Return: CSV
+		Returns all the behaviors archived in the database. 
 	/injuries
+		URL parameters: none
+		Request: GET
+		Return: CSV
+		Returns all the injuries archived in the database. 
 	/sampleStation
+		URL parameters: TBD
+		Request: GET
+		Return: JSON
+		Scheduled for later implementation.
 api/formSubmission
 	URL parameters: none
 	Request: POST
@@ -21,14 +78,14 @@ api/formSubmission
 	Return: OK or error message
 	Body JSON format sent: See JSONFormat.txt
 	Submits a form to be saved into the database, according to the following procedures:
-
+	--------------------------------------------------
 api/formRetrieval
 	URL parameters: 
 		ID: number referring to the form requested by the admin or user.
 	Request: GET
 	Return: JSON
 	Return JSON format requested: See JSONFormat.txt
-	A web user will use a form ID to get all investigation record data corresponding to the particular ID, done using a complex query. The API will fetch the data and send it back in a formatted JSON described above. 
+	A web user will use a form ID to get all investigation record data corresponding to the particular ID, done using a complex query. The API will fetch the data and send it back in a formatted JSON described in the given file. 
 api/adminQuery
 	URL parameters: none 
 	Request: POST
@@ -56,5 +113,15 @@ api/adminQuery
 	Sends a user generated SQL query to be processed. The API simply needs to pass that query onto the database and package the result data to be sent back to the front end. For security reasons, the user does not query the database directly. 
 api/formUpdate
 	/approve
+		URL parameters: TBD
+		Request: POST
+		Body data: TBD
+		Return: OK or error code
+		Scheduled for later implementation.
 	/edit
+		URL parameters: TBD
+		Request: POST
+		Body data: TBD
+		Return: OK or error code
+		Scheduled for later implementation.
 	
