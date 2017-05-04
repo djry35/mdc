@@ -1,0 +1,60 @@
+api/autofill
+	/reporter
+	/observer
+	/contributor
+	/investigator
+	/county
+	/city
+	/waterbody
+	/agOther
+	/indOther
+	/munOther
+	/transOther
+	/species
+	/behaviors
+	/injuries
+	/sampleStation
+api/formSubmission
+	URL parameters: none
+	Request: POST
+	Body data: JSON 
+	Return: OK or error message
+	Body JSON format sent: See JSONFormat.txt
+	Submits a form to be saved into the database, according to the following procedures:
+
+api/formRetrieval
+	URL parameters: 
+		ID: number referring to the form requested by the admin or user.
+	Request: GET
+	Return: JSON
+	Return JSON format requested: See JSONFormat.txt
+	A web user will use a form ID to get all investigation record data corresponding to the particular ID, done using a complex query. The API will fetch the data and send it back in a formatted JSON described above. 
+api/adminQuery
+	URL parameters: none 
+	Request: POST
+	Body data: string
+	Return: JSON
+	Return JSON format requested: 
+		{
+			"rows":[
+				{
+					(each grouping is a tuple)
+					<Column 1 Name>:<Column 1 value>
+					<Column 2 Name>:<Column 2 value>
+					<Column 3 Name>:<Column 3 value>
+					...
+				},
+				{
+					<Column 1 Name>:<Column 1 value>
+					<Column 2 Name>:<Column 2 value>
+					<Column 3 Name>:<Column 3 value>
+					...
+				},
+				...
+			]
+		}
+	Sends a user generated SQL query to be processed. The API simply needs to pass that query onto the database and package the result data to be sent back to the front end. For security reasons, the user does not query the database directly. 
+api/formUpdate
+	/approve
+	/edit
+	

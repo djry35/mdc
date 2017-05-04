@@ -54,7 +54,7 @@
            <div class="navbar-right">
               <ul class="nav navbar-nav">
                  <li class="user">
-                    <a id="lastupdate">Last update: 04.07.2017</a>
+                    <a id="lastupdate">Last update: 04.27.2017</a>
                  </li>
               </ul>
            </div>
@@ -64,88 +64,77 @@
 
 <div style="margin-left: 40px">
 Please fill out the form below. All fields are required unless otherwise noted.<br>
-If you need assistance filling out this form, contact Joel at Joel.Sartwell@mdc.mo.gov.
+If you need assistance filling out this form, contact Daniel at Daniel.Raymon@mdc.mo.gov.
 <br><br><br>
-Expand the tabs to fill in the information. If errors are present,<br>
-they will update when the form tries to be submitted.
+Click the tabs to expand each section. Fill out as much as you can. <br>
 </div>
 
-<!-- Placeholders for dropdowns not needing specific labels to show. 
-    Put here in case there are many different blank labels.
-    (Should these be at the bottom? IDK) -->
-<label for="unitsTempAfter"></Label>
-<label for="unitsTempDuring"></Label>
-<label for="dmgUnits"></label>
-<label for="unitsTime"></label>
-
-<form id="formWrapper" data-parsley-validate="">
+<form id="formWrapper">
     <div id="form">
-        <h3 id="descriptionTab">Descriptive Data <span id='descriptionError' style='color: red' hidden>  (click to see error) </span>
-        </h3>
+        <h3 id="descriptionTab">Descriptive Data</span></h3>
         <div id="descriptionExpand">
             <div style="height: 370px">
                 <h4>Your Information</h4>
                 <div class="inputWrapper">
                     <label for="rFirstName" class="txtFieldHeader">First Name:</label>
-                    <input type="text" name="rFirstName" class="txtFieldInput form-control" id="rFirstName" required data-parsley-length="[3, 15]">
+                    <input type="text" name="rFirstName" class="txtFieldInput form-control" id="rFirstName">
                 </div>
                 <div class="inputWrapper">
                     <label for="rLastName" class="txtFieldHeader">Last Name:</label>
-                    <input type="text" name="rLastName" class="txtFieldInput form-control" id="rLastName" required data-parsley-length="[3, 15]">
+                    <input type="text" name="rLastName" class="txtFieldInput form-control" id="rLastName">
                 </div>
                 <div class="inputWrapper">
                     <label for="rTitle" class="txtFieldHeader">Title:</label>
-                    <input type="text" name="rTitle" class="txtFieldInput form-control" id="rTitle" required>
+                    <input type="text" name="rTitle" class="txtFieldInput form-control" id="rTitle">
                 </div>
                 <div class="inputWrapper">
                     <label for="rAddress" class="txtFieldHeader">Address:</label>
-                    <input type="text" name="rAddress" class="txtFieldInput form-control" id="rAddress" required>
+                    <input type="text" name="rAddress" class="txtFieldInput form-control" id="rAddress">
                 </div>
                 <div class="inputWrapper">
                     <label for="rCity" class="txtFieldHeader">City:</label>
-                    <input type="text" name="rCity" class="txtFieldInput form-control" id="rCity" required>
+                    <input type="text" name="rCity" class="txtFieldInput form-control" id="rCity">
                 </div>
                 <div class="inputWrapper">
                     <label for="rZipCode" class="txtFieldHeader">Zip:</label>
-                    <input type="number" name="rZipCode" class="txtFieldInput form-control" id="rZipCode" style="width: 70px" required pattern="^\d{5}$">
+                    <input type="number" name="rZipCode" class="txtFieldInput form-control" id="rZipCode" style="width: 70px">
                 </div>
                 <div class="inputWrapper">
                     <label for="rPhone" class="txtFieldHeader">Phone:</label>
-                    <input type="tel" name="rPhone" placeholder="123 456-7890" class="txtFieldInput form-control" id="rPhone" style="width: 150px" required pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$">
+                    <input type="tel" name="rPhone" placeholder="123-456-7890" class="txtFieldInput form-control" id="rPhone" style="width: 150px">
                 </div>
             </div>
             <br>
             <div style="height:760px">
                 <h4>Investigation Details</h4>
                 <div>
-                    <div style="height: 200px">
+                    <div style="height: 85px">
                         <div class="inputWrapper">
                             <label for="investigationDate" class="txtFieldHeader">Date:</label>
-                            <input type="text" name="investigationDate" class="txtFieldInput dateInput form-control" id="investigationDate" required readonly style="background-color: #fff !important; cursor: text !important">
+                            <input type="text" name="investigationDate" class="txtFieldInput dateInput form-control" id="investigationDate" readonly style="background-color: #fff !important; cursor: text !important">
                         </div>
                         <div class="inputWrapper">
                             <label class="txtFieldHeader">Time:</label>
-                            <input name="investigationTime" id="investigationTime" class="txtFieldInput timeInput" style="width: 90px" required>
+                            <input name="investigationTime" id="investigationTime" class="txtFieldInput timeInput" style="width: 90px">
                         </div>
                     </div>
                     <div style="height: 375px">
                         <div style="height: 130px">
                             <div class="inputWrapper">
                                 <label for="nearestTown" class="txtFieldHeader">Nearest Town:</label>
-                                <input type="text" name="nearestTown" id="nearestTown" class="txtFieldInput form-control" required>
+                                <input type="text" name="nearestTown" id="nearestTown" class="txtFieldInput form-control">
                             </div>
                             <div class="inputWrapper">
-                                <label for="counties" class="txtFieldHeader">County:</label>
-                                <input name="counties" id="counties" class="txtFieldInput form-control" required>
+                                <label for="county" class="txtFieldHeader">County:</label>
+                                <input name="county" id="county" class="txtFieldInput form-control">
                             </div>
                             <div class="inputWrapper">
                                 <label class="txtFieldHeader" for="coordCategory">Location Detail:</label>
                                 <div class="txtFieldInput">
-                                    <select name="coordCategory" id="coordCategory" class="form-control" required>
+                                    <select name="coordCategory" id="coordCategory" class="form-control">
                                         <option></option>
                                         <option value="line">Plot Line</option>
                                         <option value="point">Single Point</option>
-                                        <option value="map">Diagram</option>
                                     </select>
                                 </div>
                             </div>
@@ -154,28 +143,27 @@ they will update when the form tries to be submitted.
                             <div id="lineStart" style="height: 120px" hidden>
                                 <label class="InjuriesFldsetHeader">Coordinate Point One</label><br>
                                 <div class="inputWrapper">
-                                    <label for="StartingUTM_X" class="txtFieldHeader">Xcoord</label>
-                                    <input name="StartingUTM_X" type="number" class="txtFieldInput form-control" id="StartingUTM_X">
+                                    <label for="startingUTM_X" class="txtFieldHeader">Xcoord</label>
+                                    <input name="startingUTM_X" type="number" class="txtFieldInput form-control" id="startingUTM_X">
                                 </div>
                                 <div class="inputWrapper">
-                                    <label for="StartingUTM_Y" class="txtFieldHeader">Ycoord</label>
-                                    <input name="StartingUTM_Y" type="number" class="txtFieldInput form-control" id="StartingUTM_Y">
+                                    <label for="startingUTM_Y" class="txtFieldHeader">Ycoord</label>
+                                    <input name="startingUTM_Y" type="number" class="txtFieldInput form-control" id="startingUTM_Y">
                                 </div>
                             </div>
                             <div id="lineEnd" hidden>
                                 <label class="InjuriesFldsetHeader">Coordinate Point Two</label><br>
                                 <div class="inputWrapper">
-                                    <label for="EndingUTM_X" class="txtFieldHeader">Xcoord</label>
-                                    <input name="EndingUTM_X" type="number" class="txtFieldInput form-control" id="EndingUTM_X">
+                                    <label for="endingUTM_X" class="txtFieldHeader">Xcoord</label>
+                                    <input name="endingUTM_X" type="number" class="txtFieldInput form-control" id="endingUTM_X">
                                 </div>
                                 <div class="inputWrapper">
-                                    <label for="EndingUTM_Y" class="txtFieldHeader">Ycoord</label>
-                                    <input name="EndingUTM_Y" type="number" class="txtFieldInput form-control" id="EndingUTM_Y">
+                                    <label for="endingUTM_Y" class="txtFieldHeader">Ycoord</label>
+                                    <input name="endingUTM_Y" type="number" class="txtFieldInput form-control" id="endingUTM_Y">
                                 </div>
                             </div>
 
-                            <!-- I don't know what to do with this yet. -->
-                            <div id="map" hidden>I'm a map!<br></div>
+                            <!-- Was decided that a map would not be included. -->
                         </div>
                     </div>
                     <div>
@@ -192,7 +180,7 @@ they will update when the form tries to be submitted.
                 <div class="inputWrapper">
                     <label class="txtFieldHeader" for="waterType">Body of Water</label>
                     <div class="txtFieldInput">
-                        <select name="waterType" id="waterType" class="form-control" required>
+                        <select name="waterType" id="waterType" class="form-control">
                             <option></option>
                             <option value="lake">Lake</option>
                             <option value="pond">Pond</option>
@@ -205,11 +193,14 @@ they will update when the form tries to be submitted.
                 </div>
                 <div class="inputWrapper">
                     <label for="waterbodyName" class="txtFieldHeader">Body Name:</label>
-                    <input name="waterbodyName" type="text" id="waterbodyName" class="txtFieldInput" required>
+                    <input name="waterbodyName" type="text" id="waterbodyName" class="txtFieldInput">
                 </div>
             </div>
+            <div>
+                <!-- reported by and observer -->
+            </div>
         </div>
-        <h3 id="involvedTab">People Involved <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
+        <h3 id="involvedTab">People Involved</h3>
         <div id="involvedExpand">
             <div id="addPeopleContainer">
                 <input type="button" value="Add a Person" id="addPeopleNotified">
@@ -217,206 +208,200 @@ they will update when the form tries to be submitted.
             <div id="notifiedPeopleContainer">
                 <div class="notifiedPerson" id="notified1">
                     <label class='notifiedPersonHeader'>Person Information</label>
-                    <div>
+                    <div class="inputWrapper">
+                        <label for="agencyNotified1" class="txtFieldHeader">Agency</label>
+                        <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" value="DNR-EER">
                     </div>
                     <div class="inputWrapper">
-                        <label for="agencyNotified" class="txtFieldHeader">Agency</label>
-                        <input name="agencyNotified1" class="txtFieldInput agencyDropdown" id="agencyNotified1" 
-                            value="DNR-EER" required disabled>
+                        <label for="personNotifiedFName1" class="txtFieldHeader">First Name</label>
+                        <input name="personNotifiedFName1" class="txtFieldInput" id="personNotifiedFName1">
                     </div>
                     <div class="inputWrapper">
-                        <label for="personNotified" class="txtFieldHeader">Name</label>
-                        <input name="personNotified1" class="txtFieldInput" id="personNotified1" required>
+                        <label for="personNotifiedLName1" class="txtFieldHeader">Last Name</label>
+                        <input name="personNotified1LName1" class="txtFieldInput" id="personNotifiedLName1">
                     </div>
                     <div class="inputWrapper">
-                        <label for="phoneNotified" class="txtFieldHeader">Phone</label>
-                        <input name="phoneNotified1" type="tel" class="txtFieldInput" id="phoneNotified1" required>
+                        <label for="phoneNotified1" class="txtFieldHeader">Phone</label>
+                        <input name="phoneNotified1" type="tel" class="txtFieldInput" id="phoneNotified1">
                     </div>
                     <div class="inputWrapper">
-                        <label for="emailNotified" class="txtFieldHeader">Email</label>
-                        <input name="emailNotified1" class="txtFieldInput" id="emailNotified1" required>
+                        <label for="emailNotified1" class="txtFieldHeader">Email</label>
+                        <input name="emailNotified1" class="txtFieldInput" id="emailNotified1">
                     </div>
                     <div class="inputWrapper">
-                        <label for="dateNotified" class="txtFieldHeader">Date</label>
-                        <input name="dateNotified1" class="txtFieldInput dateInput" id="dateNotified1" required readonly style="background-color: #fff !important; cursor: text !important">
+                        <label for="dateNotified1" class="txtFieldHeader">Date</label>
+                        <input name="dateNotified1" class="txtFieldInput dateInput" id="dateNotified1" readonly style="background-color: #fff !important; cursor: text !important">
                     </div>
                     <div class="inputWrapper">
-                        <label class="txtFieldHeader">Time</label>
-                        <input name="timeNotified1" id="timeNotified1" class="timeInput txtFieldInput" style="width: 90px" required>
+                        <label for="timeNotified1" class="txtFieldHeader">Time</label>
+                        <input name="timeNotified1" id="timeNotified1" class="timeInput txtFieldInput" style="width: 90px">
                     </div>
                 </div>
             </div>
         </div>
-        <h3 id="pollutionTab">Pollution Source <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
+        <h3 id="pollutionTab">Pollution Source</h3>
         <div id="pollutionExpand">
             <div id="pollutants">
-                <div id="pollutantsError" hidden>  
-                    <span class="errorMsg"></span>
-                </div>
                 <div>
                     <label for="agOps">Agriculture Operations</label>
-                    <input type="checkbox" name="pollutionCat[]" id="agOps" class="pollutionCat" data-parsley-group="pollutionCheckboxes" data-parsley-mincheck="1" required>
+                    <input type="checkbox" name="pollutionCategory" id="agOps" value="agOps" class="pollutionCat">
                     <div id="agOpsOptions" hidden>
                         <label for="fertilizer">Fertilizer</label> 
-                        <input name="agPollution[]" type="checkbox" class="agPollution" id="fertilizer" data-parsley-group="agPollution">
+                        <input name="agOpsSubcategory" type="checkbox" value="fertilizer" class="agPollution" id="fertilizer">
                         <label for="pesticide">Pesticide</label> 
-                        <input name="agPollution[]" type="checkbox" class="agPollution" id="pesticide" data-parsley-group="agPollution">
+                        <input name="agOpsSubcategory" type="checkbox" value="pesticide" class="agPollution" id="pesticide">
                         <label for="manure">Manure</label>  
-                        <input name="agPollution[]" type="checkbox" class="agPollution" id="manure" data-parsley-group="agPollution">
+                        <input name="agOpsSubcategory" type="checkbox" value="manure" class="agPollution" id="manure">
                         <label for="agOtherPol">Other</label>  
-                        <input name="agPollution[]" type="checkbox" class="agPollution otherSelection" id="agOtherPol" data-parsley-group="agPollution">
+                        <input name="agOpsSubcategory" type="checkbox" value="other" class="agPollution otherSelection" id="agOtherPol">
                         <div class="otherSpecs" id="agOtherDesc" hidden>
-                            (optional) Specify: <input type="text" name="agPollution[]" id="agOtherSpec" data-parsley-group="otherPollutionSpec">
+                            (optional) Specify: <input type="text" name="agOtherSpec" id="agOtherSpec">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="indOps">Industrial Operations</label> 
-                    <input type="checkbox" name="pollutionCat[]" id="indOps" class="pollutionCat" data-parsley-group="pollutionCheckboxes">
+                    <input type="checkbox" name="pollutionCategory" id="indOps" value="indOps" class="pollutionCat">
                     <div id="indOpsOptions" hidden>
                         <label for="chemical">Chemical</label>
-                        <input name="indPollution[]" type="checkbox" class="indPollution" id="chemical" data-parsley-group="indPollution">
+                        <input name="indOpsSubcategory" type="checkbox" value="chemical" class="indPollution" id="chemical">
                         <label for="petroleum">Petroleum</label>
-                        <input name="indPollution[]" type="checkbox" class="indPollution" id="petroleum" data-parsley-group="indPollution">
+                        <input name="indOpsSubcategory" type="checkbox" value="petroleum" class="indPollution" id="petroleum">
                         <label for="metals">Metals</label>
-                        <input name="indPollution[]" type="checkbox" class="indPollution" id="metals" data-parsley-group="indPollution">
+                        <input name="indOpsSubcategory" type="checkbox" value="metals" class="indPollution" id="metals">
                         <label for="indOtherPol">Other</label>
-                        <input name="indPollution[]" type="checkbox" class="indPollution otherSelection" id="indOtherPol" data-parsley-group="indPollution">
+                        <input name="indOpsSubcategory" type="checkbox" value="other" class="indPollution otherSelection" id="indOtherPol">
                         <div class="otherSpecs" id="indOtherDesc" hidden>
-                            (optional) Specify: <input name="indPollution[]" type="text" id="indOtherSpec" data-parsley-group="otherPollutionSpec">
+                            (optional) Specify: <input name="indOtherSpec" type="text" id="indOtherSpec">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="munOps">Municipal Operations</label> 
-                    <input name="pollutionCat[]" type="checkbox" id="munOps" class="pollutionCat" data-parsley-group="pollutionCheckboxes">
+                    <input name="pollutionCategory" type="checkbox" id="munOps" value="munOps" class="pollutionCat">
                     <div id="munOpsOptions" hidden>
                         <label for="power">Power</label>
-                        <input name="munPollution[]" type="checkbox" class="munPollution" id="power" data-parsley-group="munPollution">
+                        <input name="munOpsSubcategory" type="checkbox" value="power" class="munPollution" id="power">
                         <label for="refuse">Refuse</label>
-                        <input name="munPollution[]" type="checkbox" class="munPollution" id="refuse" data-parsley-group="munPollution">
+                        <input name="munOpsSubcategory" type="checkbox" value="refuse" class="munPollution" id="refuse">
                         <label for="sewage">Sewage</label>
-                        <input name="munPollution[]" type="checkbox" class="munPollution" id="sewage" data-parsley-group="munPollution">
+                        <input name="munOpsSubcategory" type="checkbox" value="sewage" class="munPollution" id="sewage">
                         <label for="munOtherPol">Other</label>
-                        <input name="munPollution[]" type="checkbox" class="munPollution otherSelection" id="munOtherPol" data-parsley-group="munPollution">
+                        <input name="munOpsSubcategory" type="checkbox" value="other" class="munPollution otherSelection" id="munOtherPol">
                         <div class="otherSpecs" id="munOtherDesc" hidden>
-                            (optional) Specify: <input type="text" name="munPollution[]" id="munOtherSpec" data-parsley-group="otherPollutionSpec">
+                            (optional) Specify: <input type="text" name="munOtherSpec" id="munOtherSpec">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="transOps">Transportation Operations</label>
-                    <input name="pollutionCat[]" type="checkbox" id="transOps" class="pollutionCat" data-parsley-group="pollutionCheckboxes">
+                    <input name="pollutionCategory" type="checkbox" id="transOps" value="transOps" class="pollutionCat">
                     <div id="transOpsOptions" hidden>
                         <label for="pipeline">Pipeline</label>
-                        <input name="transPollution[]" type="checkbox" class="transPollution" id="pipeline" data-parsley-group="transPollution">
+                        <input name="transOpsSubcategory" type="checkbox" value="pipeline" class="transPollution" id="pipeline">
                         <label for="truck">Truck</label>
-                        <input name="transPollution[]" type="checkbox" class="transPollution" id="truck" data-parsley-group="transPollution">
+                        <input name="transOpsSubcategory" type="checkbox" value="truck" class="transPollution" id="truck">
                         <label for="rail">Rail</label>
-                        <input name="transPollution[]" type="checkbox" class="transPollution" id="rail" data-parsley-group="transPollution">
+                        <input name="transOpsSubcategory" type="checkbox" value="rail" class="transPollution" id="rail">
                         <label for="transOtherPol">Other</label>
-                        <input name="transPollution[]" type="checkbox" class="transPollution otherSelection" id="transOtherPol" data-parsley-group="transPollution">
+                        <input name="transOpsSubcategory" type="checkbox" value="other" class="transPollution otherSelection" id="transOtherPol">
                         <div class="otherSpecs" id="transOtherDesc" hidden>
-                            (optional) Specify: <input name="transPollution[]" type="text" id="transOtherSpec" data-parsley-group="otherPollutionSpec">
+                            (optional) Specify: <input name="transOtherSpec" type="text" id="transOtherSpec">
                         </div>
                     </div>
                 </div>
                 <div>
                     <label for="naturalPol">Natural</label>
-                    <input name="pollutionCat[]" type="checkbox" id="naturalPol" data-parsley-group="pollutionCheckboxes">
+                    <input name="pollutionCategory" type="checkbox" value="natural" class="pollutionCat" id="naturalPol">
                     <label for="otherPol">Other</label>
-                    <input name="pollutionCat[]" type="checkbox" class="otherPollution otherSelection" id="otherPol" data-parsley-group="pollutionCheckboxes">
+                    <input name="pollutionCategory" type="checkbox" value="other" class="pollutionCat otherPollution otherSelection" id="otherPol">
                     <label for="unknownPol">Unknown</label>
-                    <input name="pollutionCat[]" type="checkbox" id="unknownPol" data-parsley-group="pollutionCheckboxes">
+                    <input name="pollutionCategory" type="checkbox" value="unknown" class="pollutionCat" id="unknownPol">
                     <label for="nonePol">None</label>
-                    <input name="pollutionCat[]" type="checkbox" id="nonePol" data-parsley-group="pollutionCheckboxes">
+                    <input name="pollutionCategory" type="checkbox" value="none" class="pollutionCat" id="nonePol">
                 </div>
             </div>
             <div style="height: 190px; margin-top: 40px">
                 <div class="inputWrapper">
                     <label for="causePol" class="txtFieldHeader">Cause/Agent:</label> 
-                    <input name="causePol" type="text" class="txtFieldInput" id="causePol" required>
+                    <input name="causePol" type="text" class="txtFieldInput" id="causePol">
                 </div>
                 <div class="inputWrapper">
                     <label for="sourcePol" class="txtFieldHeader">Source:</label> 
-                    <input name="sourcePol" type="text" class="txtFieldInput" id="sourcePol" required>
+                    <input name="sourcePol" type="text" class="txtFieldInput" id="sourcePol">
                 </div>
                 <div class="inputWrapper">
                     <label for="quantityPol" class="txtFieldHeader">Quantity:</label> 
-                    <input name="quantityPol" type="number" class="txtFieldInput" id="quantityPol" required>
+                    <input name="quantityPol" type="number" class="txtFieldInput" id="quantityPol">
                 </div>
                 <div class="inputWrapper">
                     <label for="eventDatePol" class="txtFieldHeader">Spill Date:</label>
-                    <input name="eventDatePol" type="text" class="txtFieldInput dateInput" id="eventDatePol" style="width:90px" required readonly style="background-color: #fff !important; cursor: text !important">
+                    <input name="eventDatePol" type="text" class="txtFieldInput dateInput" id="eventDatePol" style="width:90px" readonly style="background-color: #fff !important; cursor: text !important">
                 </div>
             </div>
             <div>
                 <label for="moWatersContamination">Are Missouri waters contaminated?</label>
                 <label for="YWC">Yes</label>
-                <input type="radio" id="YWC" name="moWatersContamination" class="MWC" required>
+                <input type="radio" id="YWC" name="moWatersContamination" value="Yes" class="MWC">
                 <label for="NWC">No</label>
-                <input type="radio" id="NWC" name="moWatersContamination" class="MWC">
+                <input type="radio" id="NWC" name="moWatersContamination" value="No" class="MWC">
                 <label for="UWC">Unknown</label>
-                <input type="radio" id="UWC" name="moWatersContamination" class="MWC">
+                <input type="radio" id="UWC" name="moWatersContamination" value="Unknown" class="MWC">
             </div>
             <div>
                 <label for="groundwaterContamination">Is there evidence of groundwater contamination?</label>
                 <label for="YGW">Yes</label>
-                <input type="radio" id="YGW" name="groundwaterContamination" class="GWC" required>
+                <input type="radio" id="YGW" name="groundwaterContamination" value="Yes" class="GWC">
                 <label for="NGW">No</label>
-                <input type="radio" id="NGW" name="groundwaterContamination" class="GWC">
+                <input type="radio" id="NGW" name="groundwaterContamination" value="No" class="GWC">
                 <label for="UGW">Unknown</label>
-                <input type="radio" id="UGW" name="groundwaterContamination" class="GWC">
+                <input type="radio" id="UGW" name="groundwaterContamination" value="Unknown" class="GWC">
             </div>
         </div>
-        <h3 id="injuriesTab">Injuries to Fish and Wildlife <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
+        <h3 id="injuriesTab">Injuries to Fish and Wildlife</h3>
         <div id="injuriesExpand">
             <div>
                 <label for="otherDead">Other dead animals present</label> 
                 <input name="otherDead" type="checkbox" id="otherDead">
                 <br><br>
                 <label for="fishDead">Fish were killed by natural causes</label> 
-                <input name="fishDead" type="checkbox" id="fishDead">
+                <input name="fishDead" type="checkbox" id="fishNaturallyDead">
             </div>
             <div id="naturalKillSpec" hidden>
                 <label for="naturalDeadCt">Number dead in natural kill</label> 
                 <input name="naturalDeadCt" type="number" id="naturalDeadCt">
             </div>
-            <br><br>
-            <div id="speciesError" hidden>  
-                <span class="errorMsg"></span>
-            </div>
             <div id="species">
                 <label class="InjuriesFldsetHeader">Specify all species found dead</label><br>
                 <label for="bass">Bass</label> 
-                <input data-parsley-group="fishSpecies" data-parsley-mincheck="1" required name="speciesFish[]" class='SpeciesNaturalKill' type="checkBox" id="bass">
+                <input name="speciesCategory" value="bass" class='SpeciesNaturalKill' type="checkBox" id="bass">
                 <label for="bullheads">Bullheads</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="bullheads">
+                <input name="speciesCategory" value="bullheads" class='SpeciesNaturalKill' type="checkbox" id="bullheads">
                 <label for="carp">Carp</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="carp">
+                <input name="speciesCategory" value="carp" class='SpeciesNaturalKill' type="checkbox" id="carp">
                 <label for="catfish">Catfish</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="catfish">
+                <input name="speciesCategory" value="catfish" class='SpeciesNaturalKill' type="checkbox" id="catfish">
                 <label for="crappie">Crappie</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="crappie">
+                <input name="speciesCategory" value="crappie" class='SpeciesNaturalKill' type="checkbox" id="crappie">
                 <label for="darters">Darters</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="darters">
+                <input name="speciesCategory" value="darters" class='SpeciesNaturalKill' type="checkbox" id="darters">
                 <label for="madtoms">Madtoms</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="madtoms">
+                <input name="speciesCategory" value="madtoms" class='SpeciesNaturalKill' type="checkbox" id="madtoms">
                 <br>
                 <label for="minnows">Minnows</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="minnows">
+                <input name="speciesCategory" value="minnows" class='SpeciesNaturalKill' type="checkbox" id="minnows">
                 <label for="shad">Shad</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="shad">
+                <input name="speciesCategory" value="shad" class='SpeciesNaturalKill' type="checkbox" id="shad">
                 <label for="sunfish">Sunfish</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="sunfish">
+                <input name="speciesCategory" value="sunfish" class='SpeciesNaturalKill' type="checkbox" id="sunfish">
                 <label for="suckers">Suckers</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="suckers">
+                <input name="speciesCategory" value="suckers" class='SpeciesNaturalKill' type="checkbox" id="suckers">
                 <label for="whiteBass">WhiteBass</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="whiteBass">
+                <input name="speciesCategory" value="whiteBass" class='SpeciesNaturalKill' type="checkbox" id="whiteBass">
                 <label for="otherSpeciesDead">Other</label> 
-                <input data-parsley-group="fishSpecies" name="speciesFish[]" class='SpeciesNaturalKill' type="checkbox" id="otherSpeciesDead">
+                <input name="speciesCategory" value="other" class='SpeciesNaturalKill' type="checkbox" id="otherSpeciesDead">
                 <div class="otherSpecs" id="speciesDeadOther" hidden>
-                    Please specify other species: <input data-parsley-group="fishSpeciesOther" name="otherSpeciesDeadSpec" type="text" id="otherSpeciesDeadSpec">
+                    Please specify other species: <input name="otherSpeciesDeadSpec" type="text" id="otherSpeciesDeadSpec">
                 </div>
             </div>
 
@@ -424,7 +409,7 @@ they will update when the form tries to be submitted.
 
             <div>
                 <label for="stateOfDecay">State of Decay</label>
-                <select name="stateOfDecay" id="stateOfDecay" class="form-control" required>
+                <select name="stateOfDecay" id="stateOfDecay" class="form-control">
                     <option></option>
                     <option value="Fresh">Fresh Dead</option>
                     <option value="Slight">Slight Decay</option>
@@ -443,56 +428,50 @@ they will update when the form tries to be submitted.
 
             <br>
             <div id="injuries" hidden>
-                <div id="injuriesErrorWrapper" hidden>  
-                    <span class="errorMsg"></span>
-                </div>
                 <label class="InjuriesFldsetHeader">Injuries</label><br>
                 <label for="Abrasions">Abrasions</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="Abrasions">
+                <input name="injuryCategory" value="Abrasions" class="fishInjury" type="checkbox" id="Abrasions">
                 <label for="Bleeding">Bleeding</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="Bleeding">
+                <input name="injuryCategory" value="Bleeding" class="fishInjury" type="checkbox" id="Bleeding">
                 <label for="Bloating">Bloating</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="Bloating">
+                <input name="injuryCategory" value="Bloating" class="fishInjury" type="checkbox" id="Bloating">
                 <label for="ForwardFin">ForwardFin</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="ForwardFin">
+                <input name="injuryCategory" value="ForwardFin" class="fishInjury" type="checkbox" id="ForwardFin">
                 <label for="Lacerations">Lacerations</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="Lacerations">
+                <input name="injuryCategory" value="Lacerations" class="fishInjury" type="checkbox" id="Lacerations">
                 <br>
                 <label for="Lesions">Lesions</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="Lesions">
+                <input name="injuryCategory" value="Lesions" class="fishInjury" type="checkbox" id="Lesions">
                 <label for="BodyParts">BodyParts</label>    
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="BodyParts">
+                <input name="injuryCategory" value="BodyParts" class="fishInjury" type="checkbox" id="BodyParts">
                 <label for="Pop-eye">Pop-eye</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="Pop-eye">
-                <label for="Color">Color</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="Color">
+                <input name="injuryCategory" value="Pop-eye" class="fishInjury" type="checkbox" id="Pop-eye">
+                <label for="Color">Unusual Color</label> 
+                <input name="injuryCategory" value="Color" class="fishInjury" type="checkbox" id="Color">
                 <label for="injuryOther">Other</label> 
-                <input name="fishInjuries[]" data-parsley-group="injuriesFish" class="fishInjury" type="checkbox" id="injuryOther">
+                <input name="injuryCategory" value="injuryOther" class="fishInjury" type="checkbox" id="injuryOther">
                 <div class="otherSpecs" id="injuriesOther" hidden>
-                    Please specify other injuries: <input name="injuryOtherSpec" data-parsley-group="injuriesFishOther" type="text" id="injuryOtherSpec">
+                    Please specify other injuries: <input name="injuryOtherSpec" type="text" id="injuryOtherSpec">
                 </div>
             </div>
 
             <br><br>
-            <div id="behaviorsErrorWrapper" hidden>  
-                <span class="errorMsg"></span>
-            </div>
             <div id="behaviors">
                 <label class="InjuriesFldsetHeader">Live Fish Behavior</label><br>
                 <label for="Normal">Normal</label> 
-                <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" data-parsley-mincheck="1" required class="behavior" id="Normal">
+                <input name="behaviorCategory" type="checkbox" value="Normal" class="behavior" id="Normal">
                 <label for="Convulsive">Convulsive</label> 
-                <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" class="behavior" id="Convulsive">
+                <input name="behaviorCategory" type="checkbox" value="Convulsive" class="behavior" id="Convulsive">
                 <label for="Lethargic">Lethargic</label> 
-                <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" class="behavior" id="Lethargic">
+                <input name="behaviorCategory" type="checkbox" value="Lethargic" class="behavior" id="Lethargic">
                 <label for="Jumping">Jumping</label> 
-                <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" class="behavior" id="Jumping">
+                <input name="behaviorCategory" type="checkbox" value="Jumping" class="behavior" id="Jumping">
                 <label for="Piping">Piping</label> 
-                <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" class="behavior" id="Piping">
+                <input name="behaviorCategory" type="checkbox" value="Piping" class="behavior" id="Piping">
                 <label for="behaviorOther">Other</label> 
-                <input name="fishBehaviors[]" type="checkbox" data-parsley-group="behaviorFish" class="behavior" id="behaviorOther">
+                <input name="behaviorCategory" type="checkbox" value="Other" class="behavior" id="behaviorOther">
                 <div class="otherSpecs" id="behaviorsOther" hidden>
-                    Please specify other behaviors: <input name="OtherBehaviorSpec" data-parsley-group="behaviorFishOther" type="text" id="OtherBehaviorSpec">
+                    Please specify other behaviors: <input name="otherBehaviorSpec" type="text" id="otherBehaviorSpec">
                 </div>
             </div>
 
@@ -501,47 +480,44 @@ they will update when the form tries to be submitted.
             <div>
                 <div class="inputWrapper" id="extentDmgWrapper">
                     <label for="dmgEval">Extent of damage:</label> 
-                    <input name="dmgEval" type="text" id="dmgEval" required> 
-                    <select name="dmgUnits" id="dmgUnits" required>
+                    <input name="dmgEval" type="text" id="dmgEval"> 
+                    <select name="dmgUnits" id="dmgUnits">
                         <option></option>
                         <option value="miles">miles</option>
                         <option value="acres">acres</option>
                         <option value="feet">feet</option>
                     </select><br>
                 </div>
-                <div id="dmgEvalError" hidden><span class="errorMsg"></span></div>
                 <br><br>
                 <div class="inputWrapper" id="durationEffectsWrapper">
-                <label for="Duration">Duration of Effects:</label> 
-                <input name="DurationEffects" type="number" id="DurationEffects" style="width: 51px" required> days
+                <label for="durationEffects">Duration of Effects:</label> 
+                <input name="durationEffects" type="number" id="durationEffects" style="width: 51px"> days
                 </div>
-                <div id="durationEffectsError" hidden><span class="errorMsg"></span></div>
             </div>
         </div>
-        <h3 id="environmentTab">Environmental Conditions <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
+        <h3 id="environmentTab">Environmental Conditions</h3>
         <div id="environmentExpand">
             <div>
                 <h4>During the Investigation...</h4>
                 <div>
                     <label for="precipitationDuring">Precipitation?</label>
                     <label for="YPD">Yes</label>
-                    <input type="radio" id="YPD" name="precipitationDuring" class="PD" required>
+                    <input type="radio" id="YPD" value="Yes" name="precipitationDuring" class="PD">
                     <label for="NPD">No</label>
-                    <input type="radio" id="NPD" name="precipitationDuring" class="PD">
+                    <input type="radio" id="NPD" value="No" name="precipitationDuring" class="PD">
                 </div>
                 <div id="tempDuringWrapper">
                     <label for="airTempDuring">Air Temperature</label>
-                    <input name="airTempDuring" type="number" id="airTempDuring" style="width: 50px" required>
-                    <select name="unitsTempDuring" id="unitsTempDuring" required>
+                    <input name="airTempDuring" type="number" id="airTempDuring" style="width: 50px">
+                    <select name="unitsTempDuring" id="unitsTempDuring">
                         <option></option>
                         <option>&deg;C</option>
                         <option>&deg;F</option>
                     </select>
-                    <div id="tempDuringError" hidden><span class="errorMsg"></span></div>
                 </div>
                 <div>
                     <label for="cloudCoverDuring">Cloud Cover</label>
-                    <select name="cloudCoverDuring" id="cloudCoverDuring" required>
+                    <select name="cloudCoverDuring" id="cloudCoverDuring">
                         <option></option>
                         <option value="clear">Clear</option>
                         <option value="partlyCloudy">Partly Cloudy</option>
@@ -552,7 +528,7 @@ they will update when the form tries to be submitted.
                 <label class="InjuriesFldsetHeader">Water Description</label>
                 <div>
                     <label for="waterFlowDuring">Water Flow</label>
-                    <select name="waterFlowDuring" id="waterFlowDuring" required>
+                    <select name="waterFlowDuring" id="waterFlowDuring">
                         <option></option>
                         <option value="0">None</option>
                         <option value="low">Low</option>
@@ -562,7 +538,7 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="waterTurbidityDuring">Turbidity</label>
-                    <select name="waterTurbidityDuring" id="waterTurbidityDuring" required>
+                    <select name="waterTurbidityDuring" id="waterTurbidityDuring">
                         <option></option>
                         <option value="clear">Clear</option>
                         <option value="hazy">Hazy</option>
@@ -571,25 +547,25 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="waterDescColorDuring">Describe the color:</label>
-                    <input name="waterDescColorDuring" type="text" id="waterDescColorDuring" required>
+                    <input name="waterDescColorDuring" type="text" id="waterDescColorDuring">
                 </div>
                 <div>
                     <label for="dischargeDuring">Visible Discharge?</label>
                     <label for="YDD">Yes</label>
-                    <input type="radio" id="YDD" name="dischargeDuring" class="DD" required>
+                    <input type="radio" id="YDD" name="dischargeDuring" value="Yes" class="DD">
                     <label for="NDD">No</label>
-                    <input type="radio" id="NDD" name="dischargeDuring" class="DD">
+                    <input type="radio" id="NDD" name="dischargeDuring" value="No" class="DD">
                 </div>
                 <div>
                     <label for="scumDuring">Surface Scum Present?</label>
                     <label for="YSD">Yes</label>
-                    <input type="radio" id="YSD" name="scumDuring" class="SD" required>
+                    <input type="radio" id="YSD" name="scumDuring" value="Yes" class="SD">
                     <label for="NSD">No</label>
-                    <input type="radio" id="NSD" name="scumDuring" class="SD">
+                    <input type="radio" id="NSD" name="scumDuring" value="No" class="SD">
                 </div>
                 <div>
                     <label for="waterDescOdorDuring">Describe any odor present:</label> 
-                    <input name="waterDescOdorDuring" type="text" id="waterDescOdorDuring" required>
+                    <input name="waterDescOdorDuring" type="text" id="waterDescOdorDuring">
                 </div>
             </div>
             <br><br><br>
@@ -598,28 +574,26 @@ they will update when the form tries to be submitted.
                 <div>
                     <label for="precipitationAfter">Precipitation?</label>
                     <label for="YPA">Yes</label>
-                    <input type="radio" id="YPA" name="precipitationAfter" class="PA" required>
+                    <input type="radio" id="YPA" name="precipitationAfter" value="Yes" class="PA">
                     <label for="NPA">No</label>
-                    <input type="radio" id="NPA" name="precipitationAfter" class="PA">
+                    <input type="radio" id="NPA" name="precipitationAfter" value="No" class="PA">
                     <div id="precAmt" hidden>
                         <label for="precAmtSpec">Specify amount:</label>
                         <input name="precAmtSpec" type="number" id="precAmtSpec"> inches
                     </div>
-                    <div id="precipitationAfterError" hidden><span class="errorMsg"></span></div>
                 </div>
                 <div id="tempAfterWrapper">
                     <label for="airTempAfter">Air Temperature</label>
-                    <input name="airTempAfter" type="number" id="airTempAfter" style="width: 50px" required>
-                    <select name="unitsTempAfter" id="unitsTempAfter" required>
+                    <input name="airTempAfter" type="number" id="airTempAfter" style="width: 50px">
+                    <select name="unitsTempAfter" id="unitsTempAfter">
                         <option></option>
                         <option>&deg;C</option>
                         <option>&deg;F</option>
                     </select>
-                    <div id="tempAfterError" hidden><span class="errorMsg"></span></div>
                 </div>
                 <div>
                     <label for="cloudCoverAfter">Cloud Cover</label>
-                    <select name="cloudCoverAfter" id="cloudCoverAfter" required>
+                    <select name="cloudCoverAfter" id="cloudCoverAfter">
                         <option></option>
                         <option value="clear">Clear</option>
                         <option value="partlyCloudy">Partly Cloudy</option>
@@ -630,7 +604,7 @@ they will update when the form tries to be submitted.
                 <label class="InjuriesFldsetHeader">Water Description</label>
                 <div>
                     <label for="waterFlowAfter">Water Flow</label>
-                    <select name="waterFlowAfter" id="waterFlowAfter" required>
+                    <select name="waterFlowAfter" id="waterFlowAfter">
                         <option></option>
                         <option value="0">None</option>
                         <option value="low">Low</option>
@@ -640,7 +614,7 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="waterTurbidityAfter">Turbidity</label>
-                    <select name="waterTurbidityAfter" id="waterTurbidityAfter" required>
+                    <select name="waterTurbidityAfter" id="waterTurbidityAfter">
                         <option></option>
                         <option value="clear">Clear</option>
                         <option value="hazy">Hazy</option>
@@ -649,29 +623,29 @@ they will update when the form tries to be submitted.
                 </div>
                 <div>
                     <label for="waterDescColorAfter">Describe the color:</label> 
-                    <input name="waterDescColorAfter" type="text" id="waterDescColorAfter" required>
+                    <input name="waterDescColorAfter" type="text" id="waterDescColorAfter">
                 </div>
                 <div>
                     <label for="dischargeAfter">Visible Discharge?</label>
                     <label for="YDA">Yes</label>
-                    <input type="radio" id="YDA" name="dischargeAfter" class="DA" required>
+                    <input type="radio" id="YDA" name="dischargeAfter" value="Yes" class="DA">
                     <label for="NDA">No</label>
-                    <input type="radio" id="NDA" name="dischargeAfter" class="DA">
+                    <input type="radio" id="NDA" name="dischargeAfter" value="No" class="DA">
                 </div>
                 <div>
                     <label for="scumAfter">Surface Scum Present?</label>
                     <label for="YSA">Yes</label>
-                    <input type="radio" id="YSA" name="scumAfter" class="SA" required>
+                    <input type="radio" id="YSA" name="scumAfter" value="Yes" class="SA">
                     <label for="NSA">No</label>
-                    <input type="radio" id="NSA" name="scumAfter" class="SA">
+                    <input type="radio" id="NSA" name="scumAfter" value="No" class="SA">
                 </div>
                 <div>
                     <label for="WaterDescOdorAfter">Describe any odor present:</label> 
-                    <input name="WaterDescOdorAfter" type="text" id="WaterDescOdorAfter" required>
+                    <input name="WaterDescOdorAfter" type="text" id="WaterDescOdorAfter">
                 </div>
             </div>
         </div>
-        <h3 id="investigationTab">Investigative Time <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
+        <h3 id="investigationTab">Investigative Time</h3>
         <div id="investigationExpand">
             <div id="addPeopleContainer">
                 <input type="button" value="Add a Person" id="addPeopleInvestigated">
@@ -679,19 +653,23 @@ they will update when the form tries to be submitted.
             <div id="investigativePeopleContainer">
             </div>
         </div>
-        <h3 id="waterSamplesTab">Water Sample Stations <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
+        <h3 id="waterSamplesTab">Water Sample Stations</h3>
         <div id="waterSamplesExpand">
-            This section has not been implemented yet. You will need to submit a water sample station form.
+            <div id="addPeopleContainer">
+                <input type="button" value="Add a Station" id="addWaterSampleStations">
+            </div>
+            <div id="waterSampleStationsContainer">
+            </div>
         </div>
-        <h3 id="commentsTab">Comments <span id='descriptionError' style='color: red' hidden>  (click to see error) </span></h3>
+        <h3 id="commentsTab">Comments</h3>
         <div id="commentsExpand">
             <div style="height: 255px">
-              <label for="comments">Type any comments or narratives regarding the investigation:</label><br>
-              <textarea name="comments" id="comments" cols="100" required></textarea>
+              <label for="investigationComments">Type any comments or narratives regarding the investigation:</label><br>
+              <textarea name="investigationComments" id="investigationComments" cols="100"></textarea>
             </div>
             <div style="height: 255px">
-              <label for="actions">Describe any corrective action needed:</label><br>
-              <textarea name="actions" id="actions" cols="100" required></textarea>
+              <label for="investigationActions">Describe any corrective action needed:</label><br>
+              <textarea name="investigationActions" id="investigationActions" cols="100"></textarea>
             </div>
         </div>
     </div>
@@ -716,17 +694,17 @@ they will update when the form tries to be submitted.
     </div>
 </div>
 <!-- All JS goes down here to ensure all elements get their events -->
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-<script type="text/javascript" src="js/regexPlugin.js"></script>
-<script type="text/javascript" src="js/parsley.min.js"></script>
-<script type="text/javascript" src="js/parsleyTest.js"></script>
-<script type="text/javascript" src="js/dataCollection.js"></script>
-<script type="text/javascript" src="js/fromIndex.js"></script>
-<script type="text/javascript" src="js/jquery.timepicker.min.js"></script>
-<script type="text/javascript" src="js/submitEvents.js"></script>
-<script type="text/javascript" src="js/jquery.dropdown.min.js"></script>
-<script type="text/javascript" src="js/indexUI.js"></script>
-<script type="text/javascript" src="js/cookies.min.js"></script>
-<script type="text/javascript" src="js/adminLogin.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.timepicker.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.dropdown.min.js"></script>
+<script type="text/javascript" src="js/plugins/regexPlugin.js"></script>
+<script type="text/javascript" src="js/plugins/cookies.min.js"></script>
+<script type="text/javascript" src="js/index/dataCollection.js"></script>
+<script type="text/javascript" src="js/index/onChange.js"></script>
+<script type="text/javascript" src="js/index/indexUI.js"></script>
+<script type="text/javascript" src="js/index/adminLogin.js"></script>
+<script type="text/javascript" src="js/index/onChange.js"></script>
+<script type="text/javascript" src="js/index/additionalPieces.js"></script>
+<script type="text/javascript" src="js/index/autocomplete.js"></script>
 </body>
