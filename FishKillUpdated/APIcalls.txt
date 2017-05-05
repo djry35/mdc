@@ -78,7 +78,33 @@ api/formSubmission
 	Return: OK or error message
 	Body JSON format sent: See JSONFormat.txt
 	Submits a form to be saved into the database, according to the following procedures:
-	--------------------------------------------------
+		The following are checked to see if their value(s) is/are not in the corresponding archive table:
+			City
+			County
+			Fish Species
+			Fish Behaviors
+			Fish Injuries
+			People (and demographics, if applicable)
+			Pollutant Category
+			Pollutant Subcategory
+			Title
+			Agency
+			Emails
+			Waterbodies
+			Location Information
+			Responsible Parties
+		If the value isn't present, it should be added to the archive table, as well as the corresponding unapproved archive table if applicable. 
+
+		Next, the investigationRecords table gets a row inserted with the information required for that table. The investigation ID can be generated using any preferred method. 
+
+		Then, the following M-M tables will be filled in:
+			FishDead
+			InjuriesObserved
+			PeopleInvestigated
+			PeopleInvolved
+			PollutantsInvolved
+			StationsInvolved
+		These could required multiple rows based on what was entered in the form (see JSON for relevant information).
 api/formRetrieval
 	URL parameters: 
 		ID: number referring to the form requested by the admin or user.
@@ -110,7 +136,7 @@ api/adminQuery
 				...
 			]
 		}
-	Sends a user generated SQL query to be processed. The API simply needs to pass that query onto the database and package the result data to be sent back to the front end. For security reasons, the user does not query the database directly. 
+	Sends a user generated SQL query to be processed. The API simply needs to pass that query onto the database and package the result data to be sent back to the front end. For security reasons, the user does not query the database directly. Also for security reasons, various queries will be disabled at the DBA's discretion.  
 api/formUpdate
 	/approve
 		URL parameters: TBD
