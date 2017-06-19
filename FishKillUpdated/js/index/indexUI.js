@@ -59,8 +59,12 @@ $("#form").accordion({
 	active: false,
 	icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" },
 	beforeActivate: function(event, ui) { 
-		if($("#form").accordion("option", "active") !== false)
+		if($( "#form" ).accordion("option", "active") !== false)
+		{
+			$.LoadingOverlay("show");
 			saveData();
+			$.LoadingOverlay("hide");
+		}
 	}
 });
 

@@ -56,44 +56,18 @@ function loadData()
 
 function saveData()
 {
-	/*var arr = $("#formWrapper").serializeArray();
-	var jsonBody = JSON.stringify(arr);
-	jsonBody = jsonBody.replace('[{', '{');
-	jsonBody = jsonBody.replace('}]', '}');*/
+	var peopleNotifiedSelector = "input:regex(name, .+Notified[^\"]*)";
+	var peopleNotified = $(peopleNotifiedSelector).serializeArray(); 
 	
-	/*var re = /({\"name\":\"agencyNotified.+timeNotified.+?})/;
-	jsonBody = jsonBody.replace(re, "{\"Name\":\"PeopleNotified\",\"Value\":[$&]}");
-	re = /({\"name\":\"agencyNotified.+?timeNotified.+?})/g;
-	jsonBody = jsonBody.replace(re, "[$&]");
-	re = /Notified[1-9]/g;
-	jsonBody = jsonBody.replace(re, "Notified");
-	re = /NotifiedFName[1-9]/g;
-	jsonBody = jsonBody.replace(re, "Notified");
-	re = /NotifiedLName[1-9]/g;
-	jsonBody = jsonBody.replace(re, "NotifiedLName");*/
+	var peopleInvestigatedSelector = "input:regex(name, .+Investigated[^\"]*)";
+	var peopleInvestigated = $(peopleInvestigatedSelector).serializeArray(); 
 	
-	//var test = $("#notifiedPeopleContainer").serializeArray();
-	//var testBody = JSON.stringify(test);
-	var zxcv = $("input:regex(name, .+Notified[^\"]*)").serializeArray(); 
-	zxcv = JSON.stringify(zxcv);
-	zxcv = zxcv.replace('[{', '{');
-	zxcv = zxcv.replace('}]', '}');
+	var sampleStationsSelector = "input:regex(name, waterStation[^\"]*),textarea:regex(name, waterStation[^\"]*)";
+	var sampleStations = $("input:regex(name, waterStation[^\"]*),textarea:regex(name, waterStation[^\"]*)").serializeArray();
 	
+	var arr = $("input:not(" + peopleNotifiedSelector + "," + peopleInvestigatedSelector + "," + sampleStationsSelector + ")," +
+		"textarea:not(" + peopleNotifiedSelector + "," + peopleInvestigatedSelector + "," + sampleStationsSelector + ")").serializeArray();
+	var fullJSON = JSON.stringify({ FormData: arr , peopleNotified: peopleNotified, PeopleInvestigated: peopleInvestigated, SampleStations: sampleStations });
 	
-	var zxcv = $("input:regex(name, .+Investigated[^\"]*)").serializeArray(); 
-	zxcv = JSON.stringify(zxcv);
-	zxcv = zxcv.replace('[{', '{');
-	zxcv = zxcv.replace('}]', '}');
-	
-	var zxcv = $("input:regex(name, waterSampleStation[^\"]*)").serializeArray(); 
-	zxcv = JSON.stringify(zxcv);
-	zxcv = zxcv.replace('[{', '{');
-	zxcv = zxcv.replace('}]', '}');
-	
-	var arr = $("#formWrapper").serializeArray();
-	var jsonBody = JSON.stringify(arr);
-	jsonBody = jsonBody.replace('[{', '{');
-	jsonBody = jsonBody.replace('}]', '}');
-	jsonBody = jsonBody.replace(zxcv + ',', '');
-	console.log(jsonBody);
+	console.log(fullJSON)
 }

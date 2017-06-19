@@ -91,17 +91,17 @@ $("#addWaterSampleStations").click(
 			num++;
 		}
 
-		var ID = "<div class='inputWrapper'><label for='waterSampleStationID" + num + "' class='txtFieldHeader'>Station ID</label><input name='waterSampleStationID" + num + "' class='txtFieldInput' id='waterSampleStationID" + num + "' style='width: 90px'></div>",
-			stationDescription = "<div class='inputWrapper'><label for='waterSampleStationDescription" + num + "' class='txtFieldHeader'>Station Description</label><textarea name='waterSampleStationDescription" + num + "' class='txtFieldInput' id='waterSampleStationDescription" + num + "' style='width: 20%'></textarea></div>",
+		var ID = "<div class='inputWrapper'><label for='waterStationID" + num + "' class='txtFieldHeader'>Station ID</label><input name='waterStationID" + num + "' class='txtFieldInput' id='waterStationID" + num + "' style='width: 90px'></div>",
+			stationDescription = "<div class='inputWrapper'><label for='waterStationDescription" + num + "' class='txtFieldHeader'>Station Description</label><textarea name='waterStationDescription" + num + "' class='txtFieldInput' id='waterStationDescription" + num + "' style='width: 20%'></textarea></div>",
 			county = "<div class='inputWrapper'><label for='waterStationCounty" + num + "' class='txtFieldHeader'>County</label><input name='waterStationCounty" + num + "' class='txtFieldInput' id='waterStationCounty" + num + "'></div>",
-			coordinates = "<div class='inputWrapper'><label for='dateRecorded" + num + "' class='txtFieldHeader'>Coordinates</label><input class='txtFieldInput dateInput'></div>",
-			DO = "<div class='inputWrapper'><label for='DO" + num + "' class='txtFieldHeader'>DO (mg/L)</label><input name='DO" + num + "' class='txtFieldInput' id='DO" + num + "' style='width: 90px'></div>",
-			temp = "<div class='inputWrapper'><label for='temp" + num + "' class='txtFieldHeader'>Temperature</label><input name='temp" + num + "' class='txtFieldInput' id='temp" + num + "' style='width: 90px'></div>",
-			pH = "<div class='inputWrapper'><label for='pH" + num + "' class='txtFieldHeader'>pH</label><input name='pH" + num + "' class='txtFieldInput' id='pH" + num + "' style='width: 90px'></div>",
-			NH3 = "<div class='inputWrapper'><label for='NH3" + num + "' class='txtFieldHeader'>NH3 (mg/L)</label><input name='NH3" + num + "' class='txtFieldInput' id='NH3" + num + "' style='width: 90px'></div>",
-			comments = "<div class='inputWrapper'><label for='stationComments" + num + "' class='txtFieldHeader'>Comments</label><textarea name='stationComments" + num + "' class='txtFieldInput dateInput' id='stationComments" + num + "' cols='100' style='width: 20%'></textarea></div>",
-			date = "<div class='inputWrapper'><label for='dateRecorded" + num + "' class='txtFieldHeader'>Date</label><input name='dateRecorded" + num + "' class='txtFieldInput dateInput' id='dateRecorded" + num + "'></div>",
-			time = "<div class='inputWrapper'><label for='stationTimeRecorded" + num + "' class='txtFieldHeader'>Time</label><input name='stationTimeRecorded" + num + "' class='timeInput txtFieldInput' id='stationTimeRecorded" + num + "' style='width: 90px'></div>",
+			coordinates = "<div class='inputWrapper'><label for='waterStationDateRecorded" + num + "' class='txtFieldHeader'>Coordinates</label><input class='txtFieldInput dateInput'></div>",
+			DO = "<div class='inputWrapper'><label for='waterStationDO" + num + "' class='txtFieldHeader'>DO (mg/L)</label><input name='waterStationDO" + num + "' class='txtFieldInput' id='waterStationDO" + num + "' style='width: 90px'></div>",
+			temp = "<div class='inputWrapper'><label for='waterStationTemp" + num + "' class='txtFieldHeader'>Temperature</label><input name='waterStationTemp" + num + "' class='txtFieldInput' id='waterStationtemp" + num + "' style='width: 90px'></div>",
+			pH = "<div class='inputWrapper'><label for='waterStationPH" + num + "' class='txtFieldHeader'>pH</label><input name='waterStationPH" + num + "' class='txtFieldInput' id='waterStationpH" + num + "' style='width: 90px'></div>",
+			NH3 = "<div class='inputWrapper'><label for='waterStationNH3" + num + "' class='txtFieldHeader'>NH3 (mg/L)</label><input name='waterStationNH3" + num + "' class='txtFieldInput' id='waterStationNH3" + num + "' style='width: 90px'></div>",
+			comments = "<div class='inputWrapper'><label for='waterStationComments" + num + "' class='txtFieldHeader'>Comments</label><textarea name='waterStationComments" + num + "' class='txtFieldInput dateInput' id='waterStationComments" + num + "' cols='100' style='width: 20%'></textarea></div>",
+			date = "<div class='inputWrapper'><label for='waterStationDateRecorded" + num + "' class='txtFieldHeader'>Date</label><input name='waterStationDateRecorded" + num + "' class='txtFieldInput dateInput' id='waterStationDateRecorded" + num + "'></div>",
+			time = "<div class='inputWrapper'><label for='waterStationTimeRecorded" + num + "' class='txtFieldHeader'>Time</label><input name='waterStationTimeRecorded" + num + "' class='timeInput txtFieldInput' id='waterStationTimeRecorded" + num + "' style='width: 90px'></div>",
 			button = "<input type='button' class='stationRemoveButton' value='Remove this station' id='removeStation" + num + "'>";
 
 		$("#waterSampleStationsContainer").append(
