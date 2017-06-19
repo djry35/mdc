@@ -56,6 +56,27 @@ function loadData()
 
 function saveData()
 {
+	var album = {
+    AlbumName: "PowerAge",
+    Entered: "1/1/1977"
+	}
+	var user = {
+		Name: "Rick"
+	}
+	var userToken = "sekkritt";
+	console.log(JSON.stringify({ Album: album, User: user, UserToken: userToken }));
+	/*{
+		"Album":
+		{
+			"AlbumName":"PowerAge",
+			"Entered":"1/1/1977"
+		},
+		"User":
+		{
+			"Name":"Rick"
+		},
+		"UserToken":"sekkritt"
+	}*/
 	var peopleNotifiedSelector = "input:regex(name, .+Notified[^\"]*)";
 	var peopleNotified = $(peopleNotifiedSelector).serializeArray(); 
 	
@@ -65,9 +86,17 @@ function saveData()
 	var sampleStationsSelector = "input:regex(name, waterStation[^\"]*),textarea:regex(name, waterStation[^\"]*)";
 	var sampleStations = $("input:regex(name, waterStation[^\"]*),textarea:regex(name, waterStation[^\"]*)").serializeArray();
 	
-	var arr = $("input:not(" + peopleNotifiedSelector + "," + peopleInvestigatedSelector + "," + sampleStationsSelector + ")," +
-		"textarea:not(" + peopleNotifiedSelector + "," + peopleInvestigatedSelector + "," + sampleStationsSelector + ")").serializeArray();
-	var fullJSON = JSON.stringify({ FormData: arr , peopleNotified: peopleNotified, PeopleInvestigated: peopleInvestigated, SampleStations: sampleStations });
+	$("input:not(" + peopleNotifiedSelector + "," + peopleInvestigatedSelector + "," + sampleStationsSelector + ")," +
+		"textarea:not(" + peopleNotifiedSelector + "," + peopleInvestigatedSelector + "," + sampleStationsSelector + ")").each(
+			function(index, element) {
+				
+			}
+		);
 	
-	console.log(fullJSON)
+	
+	
+	
+	//var fullJSON = JSON.stringify({ FormData: arr , peopleNotified: peopleNotified, PeopleInvestigated: peopleInvestigated, SampleStations: sampleStations });
+	
+	//console.log(fullJSON)
 }
