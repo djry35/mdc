@@ -1,3 +1,5 @@
+
+//Use this in a JQuery selection: <selector>:regex(selector, regexp)
 jQuery.expr[':'].regex = function(elem, index, match) {
     var matchParams = match[3].split(','),
         validLabels = /^(data|css):/,
