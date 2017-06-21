@@ -21,7 +21,7 @@ $("#addPeopleNotified").click(
 			+ "'><label class='notifiedPersonHeader'>Person Information</label><div>" 
 			+ button + "</div>" + agency + FName + LName + phone + email + date + time + "</div>");
 		$("#dateNotified" + num).datepicker({ changeMonth: true, changeYear: true, 
-			onSelect: function() { $(this).parsley().validate(); } });
+			/* onSelect: function() { $(this).parsley().validate(); } */ });
 		$(".agencyDropdown").autocomplete({
 			source: ["DNR-EER", "DNR-Regional", "MDC-Aquatic Health Unit", 
 				"MDC-Supervisor"]

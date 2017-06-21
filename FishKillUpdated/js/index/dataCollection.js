@@ -149,7 +149,7 @@ function ArraysToJSON(extraForm, peopleNotified, peopleInvestigated, sampleStati
 	sampleStationsArray = sampleStationsArray.replace(/[1-9]{1,}?/g, '');
 	
 	
-	var fullJSON = JSON.stringify({ FormData: extraFormArray , peopleNotified: peopleNotifiedArray, PeopleInvestigated: peopleInvestigatedArray, SampleStations: sampleStationsArray })
+	var fullJSON = JSON.stringify({ formData: extraFormArray , peopleNotified: peopleNotifiedArray, peopleInvestigated: peopleInvestigatedArray, sampleStations: sampleStationsArray })
 		.replace(/\\/g, '').replace(/\"\[/g, '[').replace(/\]\"/g, ']');
 		
 	return fullJSON;
