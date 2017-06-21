@@ -84,10 +84,22 @@ function ArraysToJSON(extraForm, peopleNotified, peopleInvestigated, sampleStati
 					extraFormArray[extraForm[i]['name']] = extraFormArray[extraForm[i]['name']] + "," + extraForm[i]['value'];
 				}
 		}
+		var pattern = new RegExp("fieldInvestigator[1-9]{1,}");
+		if(pattern.test(extraForm[i]['name']))
+		{
+			if(undefined === extraFormArray["FieldInvestigators"])
+			{
+				extraFormArray["FieldInvestigators"] = extraForm[i]['name'].replace("fieldInvestigator", "");
+			}
 			else
 			{
-				extraFormArray[extraForm[i]['name']] = extraForm[i]['value'];
+				extraFormArray["FieldInvestigators"] = extraFormArray["FieldInvestigators"] + "," + extraForm[i]['name'].replace("fieldInvestigator", "");
 			}
+		}
+		else
+		{
+			extraFormArray[extraForm[i]['name']] = extraForm[i]['value'];
+		}
 	}
 	
 
