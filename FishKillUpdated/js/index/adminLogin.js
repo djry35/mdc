@@ -3,7 +3,7 @@ $("#adminLoginBtn").click(
 		var user = $("#adminName").val();
 		var pw = $("#adminPW").val();
 		
-		if(user != "admin" || pw != "test")
+		if(user != "" || pw != "")
 		{
 			$("#adminLoginError").removeAttr("hidden");
 			$("#adminLoginError").children().text("Incorrect username or password");
